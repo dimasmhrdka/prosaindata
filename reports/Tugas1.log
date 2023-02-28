@@ -92,7 +92,7 @@ During handling of the above exception, another exception occurred:
 [0;32m--> 167[0;31m             raise NewConnectionError(
 [0m[1;32m    168[0m                 self, "Failed to establish a new connection: %s" % e)
 
-[0;31mNewConnectionError[0m: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f168007db20>: Failed to establish a new connection: [Errno 101] Network is unreachable
+[0;31mNewConnectionError[0m: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f82a24d59d0>: Failed to establish a new connection: [Errno 101] Network is unreachable
 
 During handling of the above exception, another exception occurred:
 
@@ -112,7 +112,7 @@ During handling of the above exception, another exception occurred:
 [0;32m--> 399[0;31m             [0;32mraise[0m [0mMaxRetryError[0m[0;34m([0m[0m_pool[0m[0;34m,[0m [0murl[0m[0;34m,[0m [0merror[0m [0;32mor[0m [0mResponseError[0m[0;34m([0m[0mcause[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    400[0m [0;34m[0m[0m
 
-[0;31mMaxRetryError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10/11 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f168007db20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[0;31mMaxRetryError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10/11 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f82a24d59d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
 
 During handling of the above exception, another exception occurred:
 
@@ -159,6 +159,6 @@ During handling of the above exception, another exception occurred:
 [0m[1;32m    517[0m [0;34m[0m[0m
 [1;32m    518[0m         [0;32mexcept[0m [0mClosedPoolError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mConnectionError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10/11 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f168007db20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
-ConnectionError: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10/11 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f168007db20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[0;31mConnectionError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10/11 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f82a24d59d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ConnectionError: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10/11 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f82a24d59d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
 
