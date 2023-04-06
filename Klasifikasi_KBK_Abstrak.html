@@ -1,0 +1,2042 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Load Preprocessed Data &#8212; Dimas Mahardika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Klasifikasi_KBK_Abstrak';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas1.html"><strong>Tugas 1 (Crawling Data)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas2.html"><strong>Tugas 2 (Pipelines)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas3.html"><strong>Tugas 3 (Data Timeseries)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html"><strong>UTS</strong></a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FKlasifikasi_KBK_Abstrak.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Klasifikasi_KBK_Abstrak.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Load Preprocessed Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Load Preprocessed Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-extraction-tf-idf">Feature Extraction: TF-IDF</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#oversampling-smote">Oversampling: SMOTE</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#training-model">Training Model</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gridsearchcv">GridSearchCV</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#export-model">Export Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#demo">Demo</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="load-preprocessed-data">
+<h1>Load Preprocessed Data<a class="headerlink" href="#load-preprocessed-data" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/dimasmhrdka/data-csv/main/cleaned-data-kelas.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NIM</th>
+      <th>Nama</th>
+      <th>Judul</th>
+      <th>Abstrak</th>
+      <th>Kelas</th>
+      <th>judul_tokens</th>
+      <th>abstrak_tokens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>40411100468</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>perancangan dan implementasi sistem database t...</td>
+      <td>sistem informasi akademik siakad merupakan sis...</td>
+      <td>RPL</td>
+      <td>rancang implementasi sistem database distribus...</td>
+      <td>sistem informasi akademik siakad sistem inform...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>40411100476</td>
+      <td>M. Basith Ardianto,</td>
+      <td>aplikasi kontrol dan monitoring jaringan kompu...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+      <td>aplikasi kontrol monitoring jaring komputer ba...</td>
+      <td>jalan koneksi jaring komputer lancar ganggu ha...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>70411100070</td>
+      <td>Heri Supriyanto</td>
+      <td>sistem pendukung keputusan optimasi penjadwala...</td>
+      <td>penjadwalan kuliah di perguruan tinggi merupak...</td>
+      <td>Komputasi</td>
+      <td>sistem dukung putus optimasi jadwal matakuliah...</td>
+      <td>jadwal kuliah guru kompleks masalah variabel t...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>80411100115</td>
+      <td>Septian Rahman Hakim</td>
+      <td>sistem augmented reality animasi benda bergera...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>Komputasi</td>
+      <td>sistem augmented reality animasi benda gerak f...</td>
+      <td>iring kembang teknologi dunia muncul teknologi...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>70411100007</td>
+      <td>Adi Chandra Laksono</td>
+      <td>gerak pekerja pada game real time strategy men...</td>
+      <td>gerak pekerja ada pada game yang memiliki genr...</td>
+      <td>RPL</td>
+      <td>gerak kerja game real time strategy finite sta...</td>
+      <td>gerak kerja game milik genre rts real time str...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="split-data">
+<h1>Split Data<a class="headerlink" href="#split-data" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstrak_tokens&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kelas&#39;</span><span class="p">]</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="feature-extraction-tf-idf">
+<h1>Feature Extraction: TF-IDF<a class="headerlink" href="#feature-extraction-tf-idf" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+
+<span class="n">X_train_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(554, 4881)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">terms</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+
+<span class="n">sums</span> <span class="o">=</span> <span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">term</span> <span class="ow">in</span> <span class="nb">enumerate</span> <span class="p">(</span><span class="n">terms</span><span class="p">):</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">term</span><span class="p">,</span> <span class="n">sums</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">col</span><span class="p">]))</span>
+    
+<span class="n">ranking</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;term&#39;</span><span class="p">,</span> <span class="s1">&#39;rank&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ranking</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;rank&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        term       rank
+4077  sistem  23.040459
+701    citra  21.107039
+854     data  20.648087
+2709  metode  20.359528
+1550   hasil  19.415775
+...      ...        ...
+3608   ratus   0.050905
+690    china   0.050905
+2578    mbps   0.045443
+1647    idle   0.045443
+3544     qos   0.045443
+
+[4881 rows x 2 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="oversampling-smote">
+<h1>Oversampling: SMOTE<a class="headerlink" href="#oversampling-smote" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Komputasi    301
+RPL          178
+NLP           75
+Name: Kelas, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTE</span>
+
+<span class="n">X_train_resampled</span><span class="p">,</span> <span class="n">y_train_resampled</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">y_train_resampled</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Komputasi    301
+RPL          301
+NLP          301
+Name: Kelas, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="training-model">
+<h1>Training Model<a class="headerlink" href="#training-model" title="Permalink to this heading">#</a></h1>
+<div class="section" id="gridsearchcv">
+<h2>GridSearchCV<a class="headerlink" href="#gridsearchcv" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="c1"># defining parameter range</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;criterion&#39;</span><span class="p">:[</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">],</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">None</span><span class="p">]}</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc_ovr&#39;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># fitting the model for grid search</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_resampled</span><span class="p">,</span> <span class="n">y_train_resampled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fitting 10 folds for each of 12 candidates, totalling 120 fits
+[CV 1/10] END .....criterion=gini, max_depth=10;, score=0.768 total time=   0.1s
+[CV 2/10] END .....criterion=gini, max_depth=10;, score=0.835 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .....criterion=gini, max_depth=10;, score=0.810 total time=   0.1s
+[CV 4/10] END .....criterion=gini, max_depth=10;, score=0.816 total time=   0.1s
+[CV 5/10] END .....criterion=gini, max_depth=10;, score=0.864 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 6/10] END .....criterion=gini, max_depth=10;, score=0.857 total time=   0.1s
+[CV 7/10] END .....criterion=gini, max_depth=10;, score=0.924 total time=   0.1s
+[CV 8/10] END .....criterion=gini, max_depth=10;, score=0.850 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .....criterion=gini, max_depth=10;, score=0.849 total time=   0.1s
+[CV 10/10] END ....criterion=gini, max_depth=10;, score=0.913 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .....criterion=gini, max_depth=20;, score=0.744 total time=   0.1s
+[CV 2/10] END .....criterion=gini, max_depth=20;, score=0.752 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .....criterion=gini, max_depth=20;, score=0.771 total time=   0.1s
+[CV 4/10] END .....criterion=gini, max_depth=20;, score=0.775 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .....criterion=gini, max_depth=20;, score=0.842 total time=   0.1s
+[CV 6/10] END .....criterion=gini, max_depth=20;, score=0.858 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .....criterion=gini, max_depth=20;, score=0.896 total time=   0.1s
+[CV 8/10] END .....criterion=gini, max_depth=20;, score=0.875 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .....criterion=gini, max_depth=20;, score=0.858 total time=   0.1s
+[CV 10/10] END ....criterion=gini, max_depth=20;, score=0.875 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .....criterion=gini, max_depth=30;, score=0.760 total time=   0.1s
+[CV 2/10] END .....criterion=gini, max_depth=30;, score=0.802 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .....criterion=gini, max_depth=30;, score=0.761 total time=   0.1s
+[CV 4/10] END .....criterion=gini, max_depth=30;, score=0.825 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .....criterion=gini, max_depth=30;, score=0.817 total time=   0.1s
+[CV 6/10] END .....criterion=gini, max_depth=30;, score=0.858 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .....criterion=gini, max_depth=30;, score=0.892 total time=   0.1s
+[CV 8/10] END .....criterion=gini, max_depth=30;, score=0.883 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .....criterion=gini, max_depth=30;, score=0.858 total time=   0.1s
+[CV 10/10] END ....criterion=gini, max_depth=30;, score=0.900 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ...criterion=gini, max_depth=None;, score=0.760 total time=   0.1s
+[CV 2/10] END ...criterion=gini, max_depth=None;, score=0.760 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ...criterion=gini, max_depth=None;, score=0.761 total time=   0.1s
+[CV 4/10] END ...criterion=gini, max_depth=None;, score=0.792 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ...criterion=gini, max_depth=None;, score=0.817 total time=   0.1s
+[CV 6/10] END ...criterion=gini, max_depth=None;, score=0.850 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ...criterion=gini, max_depth=None;, score=0.917 total time=   0.2s
+[CV 8/10] END ...criterion=gini, max_depth=None;, score=0.883 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ...criterion=gini, max_depth=None;, score=0.867 total time=   0.2s
+[CV 10/10] END ..criterion=gini, max_depth=None;, score=0.900 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=10;, score=0.770 total time=   0.2s
+[CV 2/10] END ..criterion=entropy, max_depth=10;, score=0.770 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=10;, score=0.875 total time=   0.2s
+[CV 4/10] END ..criterion=entropy, max_depth=10;, score=0.821 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=10;, score=0.822 total time=   0.2s
+[CV 6/10] END ..criterion=entropy, max_depth=10;, score=0.856 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=10;, score=0.927 total time=   0.2s
+[CV 8/10] END ..criterion=entropy, max_depth=10;, score=0.833 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=10;, score=0.873 total time=   0.2s
+[CV 10/10] END .criterion=entropy, max_depth=10;, score=0.920 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=20;, score=0.720 total time=   0.2s
+[CV 2/10] END ..criterion=entropy, max_depth=20;, score=0.711 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=20;, score=0.785 total time=   0.2s
+[CV 4/10] END ..criterion=entropy, max_depth=20;, score=0.767 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=20;, score=0.758 total time=   0.2s
+[CV 6/10] END ..criterion=entropy, max_depth=20;, score=0.817 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=20;, score=0.875 total time=   0.2s
+[CV 8/10] END ..criterion=entropy, max_depth=20;, score=0.800 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=20;, score=0.875 total time=   0.2s
+[CV 10/10] END .criterion=entropy, max_depth=20;, score=0.892 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=30;, score=0.711 total time=   0.2s
+[CV 2/10] END ..criterion=entropy, max_depth=30;, score=0.719 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=30;, score=0.827 total time=   0.2s
+[CV 4/10] END ..criterion=entropy, max_depth=30;, score=0.783 total time=   0.2s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=30;, score=0.750 total time=   0.1s
+[CV 6/10] END ..criterion=entropy, max_depth=30;, score=0.833 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=30;, score=0.875 total time=   0.1s
+[CV 8/10] END ..criterion=entropy, max_depth=30;, score=0.783 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=30;, score=0.850 total time=   0.1s
+[CV 10/10] END .criterion=entropy, max_depth=30;, score=0.908 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END criterion=entropy, max_depth=None;, score=0.736 total time=   0.1s
+[CV 2/10] END criterion=entropy, max_depth=None;, score=0.727 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END criterion=entropy, max_depth=None;, score=0.827 total time=   0.1s
+[CV 4/10] END criterion=entropy, max_depth=None;, score=0.783 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END criterion=entropy, max_depth=None;, score=0.775 total time=   0.1s
+[CV 6/10] END criterion=entropy, max_depth=None;, score=0.817 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END criterion=entropy, max_depth=None;, score=0.875 total time=   0.1s
+[CV 8/10] END criterion=entropy, max_depth=None;, score=0.800 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END criterion=entropy, max_depth=None;, score=0.825 total time=   0.1s
+[CV 10/10] END criterion=entropy, max_depth=None;, score=0.892 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=10;, score=0.746 total time=   0.1s
+[CV 2/10] END .criterion=log_loss, max_depth=10;, score=0.739 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=10;, score=0.835 total time=   0.1s
+[CV 4/10] END .criterion=log_loss, max_depth=10;, score=0.802 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=10;, score=0.832 total time=   0.1s
+[CV 6/10] END .criterion=log_loss, max_depth=10;, score=0.866 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=10;, score=0.928 total time=   0.1s
+[CV 8/10] END .criterion=log_loss, max_depth=10;, score=0.843 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=10;, score=0.860 total time=   0.1s
+[CV 10/10] END criterion=log_loss, max_depth=10;, score=0.930 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=20;, score=0.711 total time=   0.1s
+[CV 2/10] END .criterion=log_loss, max_depth=20;, score=0.719 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=20;, score=0.777 total time=   0.1s
+[CV 4/10] END .criterion=log_loss, max_depth=20;, score=0.783 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=20;, score=0.758 total time=   0.1s
+[CV 6/10] END .criterion=log_loss, max_depth=20;, score=0.825 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=20;, score=0.883 total time=   0.1s
+[CV 8/10] END .criterion=log_loss, max_depth=20;, score=0.808 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=20;, score=0.867 total time=   0.1s
+[CV 10/10] END criterion=log_loss, max_depth=20;, score=0.892 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=30;, score=0.744 total time=   0.1s
+[CV 2/10] END .criterion=log_loss, max_depth=30;, score=0.719 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=30;, score=0.810 total time=   0.1s
+[CV 4/10] END .criterion=log_loss, max_depth=30;, score=0.783 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=30;, score=0.742 total time=   0.1s
+[CV 6/10] END .criterion=log_loss, max_depth=30;, score=0.833 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=30;, score=0.883 total time=   0.1s
+[CV 8/10] END .criterion=log_loss, max_depth=30;, score=0.817 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=30;, score=0.858 total time=   0.1s
+[CV 10/10] END criterion=log_loss, max_depth=30;, score=0.883 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END criterion=log_loss, max_depth=None;, score=0.728 total time=   0.1s
+[CV 2/10] END criterion=log_loss, max_depth=None;, score=0.702 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END criterion=log_loss, max_depth=None;, score=0.827 total time=   0.1s
+[CV 4/10] END criterion=log_loss, max_depth=None;, score=0.775 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END criterion=log_loss, max_depth=None;, score=0.758 total time=   0.1s
+[CV 6/10] END criterion=log_loss, max_depth=None;, score=0.833 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END criterion=log_loss, max_depth=None;, score=0.883 total time=   0.1s
+[CV 8/10] END criterion=log_loss, max_depth=None;, score=0.825 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END criterion=log_loss, max_depth=None;, score=0.842 total time=   0.1s
+[CV 10/10] END criterion=log_loss, max_depth=None;, score=0.917 total time=   0.1s
+</pre></div>
+</div>
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=10, estimator=DecisionTreeClassifier(),
+             param_grid={&#x27;criterion&#x27;: [&#x27;gini&#x27;, &#x27;entropy&#x27;, &#x27;log_loss&#x27;],
+                         &#x27;max_depth&#x27;: [10, 20, 30, None]},
+             scoring=&#x27;roc_auc_ovr&#x27;, verbose=3)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(cv=10, estimator=DecisionTreeClassifier(),
+             param_grid={&#x27;criterion&#x27;: [&#x27;gini&#x27;, &#x27;entropy&#x27;, &#x27;log_loss&#x27;],
+                         &#x27;max_depth&#x27;: [10, 20, 30, None]},
+             scoring=&#x27;roc_auc_ovr&#x27;, verbose=3)</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: DecisionTreeClassifier</label><div class="sk-toggleable__content"><pre>DecisionTreeClassifier()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">DecisionTreeClassifier</label><div class="sk-toggleable__content"><pre>DecisionTreeClassifier()</pre></div></div></div></div></div></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tabel hasil GridSearchCV</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
+<span class="n">results_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean_fit_time</th>
+      <th>std_fit_time</th>
+      <th>mean_score_time</th>
+      <th>std_score_time</th>
+      <th>param_criterion</th>
+      <th>param_max_depth</th>
+      <th>params</th>
+      <th>split0_test_score</th>
+      <th>split1_test_score</th>
+      <th>split2_test_score</th>
+      <th>split3_test_score</th>
+      <th>split4_test_score</th>
+      <th>split5_test_score</th>
+      <th>split6_test_score</th>
+      <th>split7_test_score</th>
+      <th>split8_test_score</th>
+      <th>split9_test_score</th>
+      <th>mean_test_score</th>
+      <th>std_test_score</th>
+      <th>rank_test_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.085645</td>
+      <td>0.006490</td>
+      <td>0.004321</td>
+      <td>0.000640</td>
+      <td>gini</td>
+      <td>10</td>
+      <td>{'criterion': 'gini', 'max_depth': 10}</td>
+      <td>0.768084</td>
+      <td>0.835108</td>
+      <td>0.809835</td>
+      <td>0.816204</td>
+      <td>0.864444</td>
+      <td>0.856759</td>
+      <td>0.924352</td>
+      <td>0.849722</td>
+      <td>0.848704</td>
+      <td>0.912870</td>
+      <td>0.848608</td>
+      <td>0.044051</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.104434</td>
+      <td>0.005227</td>
+      <td>0.004069</td>
+      <td>0.000388</td>
+      <td>gini</td>
+      <td>20</td>
+      <td>{'criterion': 'gini', 'max_depth': 20}</td>
+      <td>0.744142</td>
+      <td>0.752481</td>
+      <td>0.770556</td>
+      <td>0.775000</td>
+      <td>0.841852</td>
+      <td>0.858333</td>
+      <td>0.896296</td>
+      <td>0.875000</td>
+      <td>0.858333</td>
+      <td>0.875000</td>
+      <td>0.824699</td>
+      <td>0.054635</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.104320</td>
+      <td>0.005348</td>
+      <td>0.004106</td>
+      <td>0.000533</td>
+      <td>gini</td>
+      <td>30</td>
+      <td>{'criterion': 'gini', 'max_depth': 30}</td>
+      <td>0.760313</td>
+      <td>0.801986</td>
+      <td>0.760723</td>
+      <td>0.825000</td>
+      <td>0.816667</td>
+      <td>0.858333</td>
+      <td>0.891667</td>
+      <td>0.883333</td>
+      <td>0.858333</td>
+      <td>0.900000</td>
+      <td>0.835636</td>
+      <td>0.048454</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.127432</td>
+      <td>0.025003</td>
+      <td>0.004995</td>
+      <td>0.001115</td>
+      <td>gini</td>
+      <td>None</td>
+      <td>{'criterion': 'gini', 'max_depth': None}</td>
+      <td>0.760493</td>
+      <td>0.760410</td>
+      <td>0.760544</td>
+      <td>0.791667</td>
+      <td>0.816667</td>
+      <td>0.850000</td>
+      <td>0.916667</td>
+      <td>0.883333</td>
+      <td>0.866667</td>
+      <td>0.900000</td>
+      <td>0.830645</td>
+      <td>0.057568</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.162629</td>
+      <td>0.006350</td>
+      <td>0.006175</td>
+      <td>0.000832</td>
+      <td>entropy</td>
+      <td>10</td>
+      <td>{'criterion': 'entropy', 'max_depth': 10}</td>
+      <td>0.770123</td>
+      <td>0.769726</td>
+      <td>0.874950</td>
+      <td>0.821389</td>
+      <td>0.821667</td>
+      <td>0.855556</td>
+      <td>0.927037</td>
+      <td>0.832870</td>
+      <td>0.872778</td>
+      <td>0.920463</td>
+      <td>0.846656</td>
+      <td>0.051671</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.188965</td>
+      <td>0.005552</td>
+      <td>0.005690</td>
+      <td>0.000455</td>
+      <td>entropy</td>
+      <td>20</td>
+      <td>{'criterion': 'entropy', 'max_depth': 20}</td>
+      <td>0.719546</td>
+      <td>0.710678</td>
+      <td>0.785499</td>
+      <td>0.766667</td>
+      <td>0.758333</td>
+      <td>0.816667</td>
+      <td>0.875000</td>
+      <td>0.800000</td>
+      <td>0.875000</td>
+      <td>0.891667</td>
+      <td>0.799906</td>
+      <td>0.061188</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.147215</td>
+      <td>0.029631</td>
+      <td>0.004753</td>
+      <td>0.001043</td>
+      <td>entropy</td>
+      <td>30</td>
+      <td>{'criterion': 'entropy', 'max_depth': 30}</td>
+      <td>0.711437</td>
+      <td>0.719057</td>
+      <td>0.826804</td>
+      <td>0.783333</td>
+      <td>0.750000</td>
+      <td>0.833333</td>
+      <td>0.875000</td>
+      <td>0.783333</td>
+      <td>0.850000</td>
+      <td>0.908333</td>
+      <td>0.804063</td>
+      <td>0.062431</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.125406</td>
+      <td>0.003998</td>
+      <td>0.003997</td>
+      <td>0.000222</td>
+      <td>entropy</td>
+      <td>None</td>
+      <td>{'criterion': 'entropy', 'max_depth': None}</td>
+      <td>0.735988</td>
+      <td>0.727120</td>
+      <td>0.826849</td>
+      <td>0.783333</td>
+      <td>0.775000</td>
+      <td>0.816667</td>
+      <td>0.875000</td>
+      <td>0.800000</td>
+      <td>0.825000</td>
+      <td>0.891667</td>
+      <td>0.805662</td>
+      <td>0.050639</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.106496</td>
+      <td>0.004609</td>
+      <td>0.004060</td>
+      <td>0.000332</td>
+      <td>log_loss</td>
+      <td>10</td>
+      <td>{'criterion': 'log_loss', 'max_depth': 10}</td>
+      <td>0.745543</td>
+      <td>0.738755</td>
+      <td>0.835090</td>
+      <td>0.801574</td>
+      <td>0.831667</td>
+      <td>0.866389</td>
+      <td>0.927593</td>
+      <td>0.843426</td>
+      <td>0.859815</td>
+      <td>0.930278</td>
+      <td>0.838013</td>
+      <td>0.061340</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.123925</td>
+      <td>0.002015</td>
+      <td>0.003872</td>
+      <td>0.000114</td>
+      <td>log_loss</td>
+      <td>20</td>
+      <td>{'criterion': 'log_loss', 'max_depth': 20}</td>
+      <td>0.711437</td>
+      <td>0.718966</td>
+      <td>0.777256</td>
+      <td>0.783333</td>
+      <td>0.758333</td>
+      <td>0.825000</td>
+      <td>0.883333</td>
+      <td>0.808333</td>
+      <td>0.866667</td>
+      <td>0.891667</td>
+      <td>0.802433</td>
+      <td>0.061129</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.123163</td>
+      <td>0.003642</td>
+      <td>0.003847</td>
+      <td>0.000129</td>
+      <td>log_loss</td>
+      <td>30</td>
+      <td>{'criterion': 'log_loss', 'max_depth': 30}</td>
+      <td>0.744321</td>
+      <td>0.718741</td>
+      <td>0.810183</td>
+      <td>0.783333</td>
+      <td>0.741667</td>
+      <td>0.833333</td>
+      <td>0.883333</td>
+      <td>0.816667</td>
+      <td>0.858333</td>
+      <td>0.883333</td>
+      <td>0.807324</td>
+      <td>0.056242</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.124234</td>
+      <td>0.004851</td>
+      <td>0.003976</td>
+      <td>0.000239</td>
+      <td>log_loss</td>
+      <td>None</td>
+      <td>{'criterion': 'log_loss', 'max_depth': None}</td>
+      <td>0.727879</td>
+      <td>0.702165</td>
+      <td>0.826804</td>
+      <td>0.775000</td>
+      <td>0.758333</td>
+      <td>0.833333</td>
+      <td>0.883333</td>
+      <td>0.825000</td>
+      <td>0.841667</td>
+      <td>0.916667</td>
+      <td>0.809018</td>
+      <td>0.064084</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Peringkat Score Parameter hasil GridSearchCV</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rank_test_score&quot;</span><span class="p">])</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span>
+    <span class="n">results_df</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s2">&quot;criterion&quot;</span><span class="p">)</span>
+<span class="n">results_df</span><span class="p">[[</span><span class="s2">&quot;params&quot;</span><span class="p">,</span> <span class="s2">&quot;rank_test_score&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_test_score&quot;</span><span class="p">,</span> <span class="s2">&quot;std_test_score&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ad264f55-2e7c-41c5-8d62-e80836d5649f">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>params</th>
+      <th>rank_test_score</th>
+      <th>mean_test_score</th>
+      <th>std_test_score</th>
+    </tr>
+    <tr>
+      <th>criterion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>gini_10</th>
+      <td>{'criterion': 'gini', 'max_depth': 10}</td>
+      <td>1</td>
+      <td>0.848608</td>
+      <td>0.044051</td>
+    </tr>
+    <tr>
+      <th>entropy_10</th>
+      <td>{'criterion': 'entropy', 'max_depth': 10}</td>
+      <td>2</td>
+      <td>0.846656</td>
+      <td>0.051671</td>
+    </tr>
+    <tr>
+      <th>log_loss_10</th>
+      <td>{'criterion': 'log_loss', 'max_depth': 10}</td>
+      <td>3</td>
+      <td>0.838013</td>
+      <td>0.061340</td>
+    </tr>
+    <tr>
+      <th>gini_30</th>
+      <td>{'criterion': 'gini', 'max_depth': 30}</td>
+      <td>4</td>
+      <td>0.835636</td>
+      <td>0.048454</td>
+    </tr>
+    <tr>
+      <th>gini_None</th>
+      <td>{'criterion': 'gini', 'max_depth': None}</td>
+      <td>5</td>
+      <td>0.830645</td>
+      <td>0.057568</td>
+    </tr>
+    <tr>
+      <th>gini_20</th>
+      <td>{'criterion': 'gini', 'max_depth': 20}</td>
+      <td>6</td>
+      <td>0.824699</td>
+      <td>0.054635</td>
+    </tr>
+    <tr>
+      <th>log_loss_None</th>
+      <td>{'criterion': 'log_loss', 'max_depth': None}</td>
+      <td>7</td>
+      <td>0.809018</td>
+      <td>0.064084</td>
+    </tr>
+    <tr>
+      <th>log_loss_30</th>
+      <td>{'criterion': 'log_loss', 'max_depth': 30}</td>
+      <td>8</td>
+      <td>0.807324</td>
+      <td>0.056242</td>
+    </tr>
+    <tr>
+      <th>entropy_None</th>
+      <td>{'criterion': 'entropy', 'max_depth': None}</td>
+      <td>9</td>
+      <td>0.805662</td>
+      <td>0.050639</td>
+    </tr>
+    <tr>
+      <th>entropy_30</th>
+      <td>{'criterion': 'entropy', 'max_depth': 30}</td>
+      <td>10</td>
+      <td>0.804063</td>
+      <td>0.062431</td>
+    </tr>
+    <tr>
+      <th>log_loss_20</th>
+      <td>{'criterion': 'log_loss', 'max_depth': 20}</td>
+      <td>11</td>
+      <td>0.802433</td>
+      <td>0.061129</td>
+    </tr>
+    <tr>
+      <th>entropy_20</th>
+      <td>{'criterion': 'entropy', 'max_depth': 20}</td>
+      <td>12</td>
+      <td>0.799906</td>
+      <td>0.061188</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ad264f55-2e7c-41c5-8d62-e80836d5649f')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ad264f55-2e7c-41c5-8d62-e80836d5649f button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ad264f55-2e7c-41c5-8d62-e80836d5649f');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># create df of model scores ordered by performance</span>
+<span class="n">model_scores</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;split\d*_test_score&quot;</span><span class="p">)</span>
+
+<span class="c1"># plot 30 examples of dependency between cv fold and AUC scores</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">model_scores</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span>
+    <span class="n">dashes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set1&quot;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;CV test fold&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;ROC AUC OVR&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># print correlation of AUC scores across folds</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Correlation of models:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">model_scores</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/140115cd8b6382f522d6805b00672a532f5c42a61736e3220cd8f32d70510b01.png" src="_images/140115cd8b6382f522d6805b00672a532f5c42a61736e3220cd8f32d70510b01.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlation of models:
+ criterion       gini_10  entropy_10  log_loss_10   gini_30  gini_None  \
+criterion                                                               
+gini_10        1.000000    0.765246     0.848716  0.847466   0.849752   
+entropy_10     0.765246    1.000000     0.961251  0.653763   0.757846   
+log_loss_10    0.848716    0.961251     1.000000  0.786849   0.874949   
+gini_30        0.847466    0.653763     0.786849  1.000000   0.954761   
+gini_None      0.849752    0.757846     0.874949  0.954761   1.000000   
+gini_20        0.848957    0.742755     0.880020  0.904031   0.965801   
+log_loss_None  0.720946    0.961169     0.958955  0.735748   0.822184   
+log_loss_30    0.676684    0.933184     0.916650  0.747027   0.831968   
+entropy_None   0.759912    0.990111     0.966929  0.691302   0.780691   
+entropy_30     0.721180    0.969990     0.932995  0.687058   0.748478   
+log_loss_20    0.795063    0.922675     0.941446  0.847957   0.897416   
+entropy_20     0.756160    0.930016     0.935478  0.791953   0.870104   
+
+criterion       gini_20  log_loss_None  log_loss_30  entropy_None  entropy_30  \
+criterion                                                                       
+gini_10        0.848957       0.720946     0.676684      0.759912    0.721180   
+entropy_10     0.742755       0.961169     0.933184      0.990111    0.969990   
+log_loss_10    0.880020       0.958955     0.916650      0.966929    0.932995   
+gini_30        0.904031       0.735748     0.747027      0.691302    0.687058   
+gini_None      0.965801       0.822184     0.831968      0.780691    0.748478   
+gini_20        1.000000       0.787353     0.771611      0.749932    0.711920   
+log_loss_None  0.787353       1.000000     0.972486      0.984740    0.970429   
+log_loss_30    0.771611       0.972486     1.000000      0.947463    0.959947   
+entropy_None   0.749932       0.984740     0.947463      1.000000    0.978888   
+entropy_30     0.711920       0.970429     0.959947      0.978888    1.000000   
+log_loss_20    0.850688       0.946990     0.967381      0.933031    0.950210   
+entropy_20     0.829284       0.952672     0.970638      0.937680    0.954721   
+
+criterion      log_loss_20  entropy_20  
+criterion                               
+gini_10           0.795063    0.756160  
+entropy_10        0.922675    0.930016  
+log_loss_10       0.941446    0.935478  
+gini_30           0.847957    0.791953  
+gini_None         0.897416    0.870104  
+gini_20           0.850688    0.829284  
+log_loss_None     0.946990    0.952672  
+log_loss_30       0.967381    0.970638  
+entropy_None      0.933031    0.937680  
+entropy_30        0.950210    0.954721  
+log_loss_20       1.000000    0.990722  
+entropy_20        0.990722    1.000000  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span> <span class="o">=</span> <span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="n">max_depth</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_resampled</span><span class="p">,</span><span class="n">y_train_resampled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+
+<span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5881622516556292, 0.9545454545454546, &#39;x[107] &lt;= 0.0\ngini = 0.667\nsamples = 903\nvalue = [301, 301, 301]&#39;),
+ Text(0.4457781456953642, 0.8636363636363636, &#39;x[3409] &lt;= 0.0\ngini = 0.606\nsamples = 499\nvalue = [144, 93, 262]&#39;),
+ Text(0.3650662251655629, 0.7727272727272727, &#39;x[390] &lt;= 0.003\ngini = 0.569\nsamples = 463\nvalue = [142, 59, 262]&#39;),
+ Text(0.2433774834437086, 0.6818181818181818, &#39;x[2709] &lt;= 0.011\ngini = 0.612\nsamples = 299\nvalue = [132, 43, 124]&#39;),
+ Text(0.15562913907284767, 0.5909090909090909, &#39;x[126] &lt;= 0.018\ngini = 0.537\nsamples = 118\nvalue = [24, 20, 74]&#39;),
+ Text(0.12582781456953643, 0.5, &#39;x[167] &lt;= 0.024\ngini = 0.438\nsamples = 101\nvalue = [16, 12, 73]&#39;),
+ Text(0.11258278145695365, 0.4090909090909091, &#39;x[1882] &lt;= 0.025\ngini = 0.389\nsamples = 96\nvalue = [16, 7, 73]&#39;),
+ Text(0.09933774834437085, 0.3181818181818182, &#39;x[2827] &lt;= 0.0\ngini = 0.348\nsamples = 92\nvalue = [12, 7, 73]&#39;),
+ Text(0.052980132450331126, 0.22727272727272727, &#39;x[3874] &lt;= 0.029\ngini = 0.267\nsamples = 85\nvalue = [10, 3, 72]&#39;),
+ Text(0.026490066225165563, 0.13636363636363635, &#39;x[2300] &lt;= 0.045\ngini = 0.205\nsamples = 80\nvalue = [6, 3, 71]&#39;),
+ Text(0.013245033112582781, 0.045454545454545456, &#39;gini = 0.167\nsamples = 78\nvalue = [4, 3, 71]&#39;),
+ Text(0.039735099337748346, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
+ Text(0.07947019867549669, 0.13636363636363635, &#39;x[3575] &lt;= 0.026\ngini = 0.32\nsamples = 5\nvalue = [4, 0, 1]&#39;),
+ Text(0.06622516556291391, 0.045454545454545456, &#39;gini = 0.0\nsamples = 4\nvalue = [4, 0, 0]&#39;),
+ Text(0.09271523178807947, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.1456953642384106, 0.22727272727272727, &#39;x[352] &lt;= 0.019\ngini = 0.571\nsamples = 7\nvalue = [2, 4, 1]&#39;),
+ Text(0.13245033112582782, 0.13636363636363635, &#39;x[1698] &lt;= 0.001\ngini = 0.444\nsamples = 3\nvalue = [2, 0, 1]&#39;),
+ Text(0.11920529801324503, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
+ Text(0.1456953642384106, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.15894039735099338, 0.13636363636363635, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
+ Text(0.12582781456953643, 0.3181818181818182, &#39;gini = 0.0\nsamples = 4\nvalue = [4, 0, 0]&#39;),
+ Text(0.1390728476821192, 0.4090909090909091, &#39;gini = 0.0\nsamples = 5\nvalue = [0, 5, 0]&#39;),
+ Text(0.18543046357615894, 0.5, &#39;x[3807] &lt;= 0.006\ngini = 0.554\nsamples = 17\nvalue = [8, 8, 1]&#39;),
+ Text(0.17218543046357615, 0.4090909090909091, &#39;x[452] &lt;= 0.033\ngini = 0.34\nsamples = 10\nvalue = [8, 1, 1]&#39;),
+ Text(0.15894039735099338, 0.3181818181818182, &#39;gini = 0.0\nsamples = 8\nvalue = [8, 0, 0]&#39;),
+ Text(0.18543046357615894, 0.3181818181818182, &#39;x[844] &lt;= 0.06\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 1]&#39;),
+ Text(0.17218543046357615, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.1986754966887417, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.1986754966887417, 0.4090909090909091, &#39;gini = 0.0\nsamples = 7\nvalue = [0, 7, 0]&#39;),
+ Text(0.33112582781456956, 0.5909090909090909, &#39;x[3513] &lt;= 0.012\ngini = 0.552\nsamples = 181\nvalue = [108, 23, 50]&#39;),
+ Text(0.2980132450331126, 0.5, &#39;x[3539] &lt;= 0.029\ngini = 0.518\nsamples = 166\nvalue = [107, 23, 36]&#39;),
+ Text(0.271523178807947, 0.4090909090909091, &#39;x[2564] &lt;= 0.03\ngini = 0.592\nsamples = 129\nvalue = [71, 23, 35]&#39;),
+ Text(0.2582781456953642, 0.3181818181818182, &#39;x[352] &lt;= 0.134\ngini = 0.567\nsamples = 123\nvalue = [71, 17, 35]&#39;),
+ Text(0.2251655629139073, 0.22727272727272727, &#39;x[4448] &lt;= 0.022\ngini = 0.53\nsamples = 116\nvalue = [71, 11, 34]&#39;),
+ Text(0.1986754966887417, 0.13636363636363635, &#39;x[296] &lt;= 0.01\ngini = 0.43\nsamples = 77\nvalue = [56, 7, 14]&#39;),
+ Text(0.18543046357615894, 0.045454545454545456, &#39;gini = 0.377\nsamples = 72\nvalue = [55, 3, 14]&#39;),
+ Text(0.2119205298013245, 0.045454545454545456, &#39;gini = 0.32\nsamples = 5\nvalue = [1, 4, 0]&#39;),
+ Text(0.25165562913907286, 0.13636363636363635, &#39;x[1508] &lt;= 0.004\ngini = 0.579\nsamples = 39\nvalue = [15, 4, 20]&#39;),
+ Text(0.23841059602649006, 0.045454545454545456, &#39;gini = 0.509\nsamples = 25\nvalue = [15, 1, 9]&#39;),
+ Text(0.26490066225165565, 0.045454545454545456, &#39;gini = 0.337\nsamples = 14\nvalue = [0, 3, 11]&#39;),
+ Text(0.2913907284768212, 0.22727272727272727, &#39;x[1294] &lt;= 0.086\ngini = 0.245\nsamples = 7\nvalue = [0, 6, 1]&#39;),
+ Text(0.2781456953642384, 0.13636363636363635, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
+ Text(0.304635761589404, 0.13636363636363635, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.2847682119205298, 0.3181818181818182, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
+ Text(0.32450331125827814, 0.4090909090909091, &#39;x[562] &lt;= 0.058\ngini = 0.053\nsamples = 37\nvalue = [36, 0, 1]&#39;),
+ Text(0.31125827814569534, 0.3181818181818182, &#39;gini = 0.0\nsamples = 36\nvalue = [36, 0, 0]&#39;),
+ Text(0.33774834437086093, 0.3181818181818182, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.36423841059602646, 0.5, &#39;x[1236] &lt;= 0.031\ngini = 0.124\nsamples = 15\nvalue = [1, 0, 14]&#39;),
+ Text(0.3509933774834437, 0.4090909090909091, &#39;gini = 0.0\nsamples = 14\nvalue = [0, 0, 14]&#39;),
+ Text(0.37748344370860926, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
+ Text(0.4867549668874172, 0.6818181818181818, &#39;x[4270] &lt;= 0.048\ngini = 0.279\nsamples = 164\nvalue = [10, 16, 138]&#39;),
+ Text(0.4735099337748344, 0.5909090909090909, &#39;x[1383] &lt;= 0.139\ngini = 0.211\nsamples = 156\nvalue = [10, 8, 138]&#39;),
+ Text(0.4370860927152318, 0.5, &#39;x[2220] &lt;= 0.039\ngini = 0.138\nsamples = 149\nvalue = [9, 2, 138]&#39;),
+ Text(0.40397350993377484, 0.4090909090909091, &#39;x[3627] &lt;= 0.122\ngini = 0.094\nsamples = 143\nvalue = [5, 2, 136]&#39;),
+ Text(0.37748344370860926, 0.3181818181818182, &#39;x[1287] &lt;= 0.115\ngini = 0.056\nsamples = 140\nvalue = [3, 1, 136]&#39;),
+ Text(0.36423841059602646, 0.22727272727272727, &#39;x[1771] &lt;= 0.085\ngini = 0.042\nsamples = 139\nvalue = [3, 0, 136]&#39;),
+ Text(0.3509933774834437, 0.13636363636363635, &#39;x[17] &lt;= 0.05\ngini = 0.029\nsamples = 138\nvalue = [2, 0, 136]&#39;),
+ Text(0.33774834437086093, 0.045454545454545456, &#39;gini = 0.014\nsamples = 137\nvalue = [1, 0, 136]&#39;),
+ Text(0.36423841059602646, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
+ Text(0.37748344370860926, 0.13636363636363635, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
+ Text(0.39072847682119205, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.4304635761589404, 0.3181818181818182, &#39;x[4088] &lt;= 0.113\ngini = 0.444\nsamples = 3\nvalue = [2, 1, 0]&#39;),
+ Text(0.41721854304635764, 0.22727272727272727, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
+ Text(0.44370860927152317, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.47019867549668876, 0.4090909090909091, &#39;x[2910] &lt;= 0.038\ngini = 0.444\nsamples = 6\nvalue = [4, 0, 2]&#39;),
+ Text(0.45695364238410596, 0.3181818181818182, &#39;gini = 0.0\nsamples = 4\nvalue = [4, 0, 0]&#39;),
+ Text(0.48344370860927155, 0.3181818181818182, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 0, 2]&#39;),
+ Text(0.5099337748344371, 0.5, &#39;x[2594] &lt;= 0.083\ngini = 0.245\nsamples = 7\nvalue = [1, 6, 0]&#39;),
+ Text(0.4966887417218543, 0.4090909090909091, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
+ Text(0.5231788079470199, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
+ Text(0.5, 0.5909090909090909, &#39;gini = 0.0\nsamples = 8\nvalue = [0, 8, 0]&#39;),
+ Text(0.5264900662251656, 0.7727272727272727, &#39;x[3549] &lt;= 0.083\ngini = 0.105\nsamples = 36\nvalue = [2, 34, 0]&#39;),
+ Text(0.5132450331125827, 0.6818181818181818, &#39;gini = 0.0\nsamples = 34\nvalue = [0, 34, 0]&#39;),
+ Text(0.5397350993377483, 0.6818181818181818, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
+ Text(0.730546357615894, 0.8636363636363636, &#39;x[2731] &lt;= 0.0\ngini = 0.575\nsamples = 404\nvalue = [157, 208, 39]&#39;),
+ Text(0.6158940397350994, 0.7727272727272727, &#39;x[3925] &lt;= 0.0\ngini = 0.554\nsamples = 168\nvalue = [99, 49, 20]&#39;),
+ Text(0.6026490066225165, 0.6818181818181818, &#39;x[991] &lt;= 0.002\ngini = 0.504\nsamples = 150\nvalue = [99, 31, 20]&#39;),
+ Text(0.5761589403973509, 0.5909090909090909, &#39;x[1709] &lt;= 0.133\ngini = 0.41\nsamples = 130\nvalue = [97, 13, 20]&#39;),
+ Text(0.5629139072847682, 0.5, &#39;x[4829] &lt;= 0.015\ngini = 0.373\nsamples = 125\nvalue = [97, 13, 15]&#39;),
+ Text(0.5496688741721855, 0.4090909090909091, &#39;x[3629] &lt;= 0.071\ngini = 0.336\nsamples = 121\nvalue = [97, 9, 15]&#39;),
+ Text(0.5231788079470199, 0.3181818181818182, &#39;x[2861] &lt;= 0.02\ngini = 0.296\nsamples = 117\nvalue = [97, 6, 14]&#39;),
+ Text(0.5099337748344371, 0.22727272727272727, &#39;x[2778] &lt;= 0.018\ngini = 0.264\nsamples = 114\nvalue = [97, 6, 11]&#39;),
+ Text(0.4966887417218543, 0.13636363636363635, &#39;x[4719] &lt;= 0.045\ngini = 0.228\nsamples = 111\nvalue = [97, 6, 8]&#39;),
+ Text(0.48344370860927155, 0.045454545454545456, &#39;gini = 0.202\nsamples = 109\nvalue = [97, 6, 6]&#39;),
+ Text(0.5099337748344371, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 0, 2]&#39;),
+ Text(0.5231788079470199, 0.13636363636363635, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]&#39;),
+ Text(0.5364238410596026, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]&#39;),
+ Text(0.5761589403973509, 0.3181818181818182, &#39;x[4725] &lt;= 0.048\ngini = 0.375\nsamples = 4\nvalue = [0, 3, 1]&#39;),
+ Text(0.5629139072847682, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 3, 0]&#39;),
+ Text(0.5894039735099338, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.5761589403973509, 0.4090909090909091, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
+ Text(0.5894039735099338, 0.5, &#39;gini = 0.0\nsamples = 5\nvalue = [0, 0, 5]&#39;),
+ Text(0.6291390728476821, 0.5909090909090909, &#39;x[2018] &lt;= 0.087\ngini = 0.18\nsamples = 20\nvalue = [2, 18, 0]&#39;),
+ Text(0.6158940397350994, 0.5, &#39;gini = 0.0\nsamples = 18\nvalue = [0, 18, 0]&#39;),
+ Text(0.6423841059602649, 0.5, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
+ Text(0.6291390728476821, 0.6818181818181818, &#39;gini = 0.0\nsamples = 18\nvalue = [0, 18, 0]&#39;),
+ Text(0.8451986754966887, 0.7727272727272727, &#39;x[606] &lt;= 0.025\ngini = 0.479\nsamples = 236\nvalue = [58, 159, 19]&#39;),
+ Text(0.7764900662251656, 0.6818181818181818, &#39;x[2520] &lt;= 0.026\ngini = 0.372\nsamples = 194\nvalue = [37, 149, 8]&#39;),
+ Text(0.7251655629139073, 0.5909090909090909, &#39;x[2542] &lt;= 0.037\ngini = 0.292\nsamples = 180\nvalue = [32, 148, 0]&#39;),
+ Text(0.6887417218543046, 0.5, &#39;x[4440] &lt;= 0.07\ngini = 0.23\nsamples = 166\nvalue = [22, 144, 0]&#39;),
+ Text(0.6556291390728477, 0.4090909090909091, &#39;x[1592] &lt;= 0.041\ngini = 0.182\nsamples = 158\nvalue = [16, 142, 0]&#39;),
+ Text(0.6291390728476821, 0.3181818181818182, &#39;x[3370] &lt;= 0.039\ngini = 0.134\nsamples = 152\nvalue = [11, 141, 0]&#39;),
+ Text(0.6158940397350994, 0.22727272727272727, &#39;x[61] &lt;= 0.056\ngini = 0.102\nsamples = 149\nvalue = [8, 141, 0]&#39;),
+ Text(0.6026490066225165, 0.13636363636363635, &#39;x[4340] &lt;= 0.165\ngini = 0.066\nsamples = 146\nvalue = [5, 141, 0]&#39;),
+ Text(0.5894039735099338, 0.045454545454545456, &#39;gini = 0.041\nsamples = 144\nvalue = [3, 141, 0]&#39;),
+ Text(0.6158940397350994, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
+ Text(0.6291390728476821, 0.13636363636363635, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
+ Text(0.6423841059602649, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
+ Text(0.6821192052980133, 0.3181818181818182, &#39;x[2952] &lt;= 0.019\ngini = 0.278\nsamples = 6\nvalue = [5, 1, 0]&#39;),
+ Text(0.6688741721854304, 0.22727272727272727, &#39;gini = 0.0\nsamples = 5\nvalue = [5, 0, 0]&#39;),
+ Text(0.695364238410596, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.7218543046357616, 0.4090909090909091, &#39;x[2991] &lt;= 0.03\ngini = 0.375\nsamples = 8\nvalue = [6, 2, 0]&#39;),
+ Text(0.7086092715231788, 0.3181818181818182, &#39;gini = 0.0\nsamples = 6\nvalue = [6, 0, 0]&#39;),
+ Text(0.7350993377483444, 0.3181818181818182, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 2, 0]&#39;),
+ Text(0.7615894039735099, 0.5, &#39;x[785] &lt;= 0.028\ngini = 0.408\nsamples = 14\nvalue = [10, 4, 0]&#39;),
+ Text(0.7483443708609272, 0.4090909090909091, &#39;gini = 0.0\nsamples = 10\nvalue = [10, 0, 0]&#39;),
+ Text(0.7748344370860927, 0.4090909090909091, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
+ Text(0.8278145695364238, 0.5909090909090909, &#39;x[225] &lt;= 0.008\ngini = 0.541\nsamples = 14\nvalue = [5, 1, 8]&#39;),
+ Text(0.8145695364238411, 0.5, &#39;x[2557] &lt;= 0.028\ngini = 0.278\nsamples = 6\nvalue = [5, 1, 0]&#39;),
+ Text(0.8013245033112583, 0.4090909090909091, &#39;gini = 0.0\nsamples = 5\nvalue = [5, 0, 0]&#39;),
+ Text(0.8278145695364238, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.8410596026490066, 0.5, &#39;gini = 0.0\nsamples = 8\nvalue = [0, 0, 8]&#39;),
+ Text(0.9139072847682119, 0.6818181818181818, &#39;x[2731] &lt;= 0.028\ngini = 0.625\nsamples = 42\nvalue = [21, 10, 11]&#39;),
+ Text(0.8807947019867549, 0.5909090909090909, &#39;x[2009] &lt;= 0.027\ngini = 0.598\nsamples = 19\nvalue = [3, 6, 10]&#39;),
+ Text(0.8675496688741722, 0.5, &#39;x[349] &lt;= 0.042\ngini = 0.639\nsamples = 13\nvalue = [3, 6, 4]&#39;),
+ Text(0.8543046357615894, 0.4090909090909091, &#39;x[3998] &lt;= 0.02\ngini = 0.54\nsamples = 10\nvalue = [3, 6, 1]&#39;),
+ Text(0.8410596026490066, 0.3181818181818182, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
+ Text(0.8675496688741722, 0.3181818181818182, &#39;x[1709] &lt;= 0.074\ngini = 0.375\nsamples = 4\nvalue = [3, 0, 1]&#39;),
+ Text(0.8543046357615894, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
+ Text(0.8807947019867549, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.8807947019867549, 0.4090909090909091, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]&#39;),
+ Text(0.8940397350993378, 0.5, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 0, 6]&#39;),
+ Text(0.9470198675496688, 0.5909090909090909, &#39;x[3876] &lt;= 0.027\ngini = 0.355\nsamples = 23\nvalue = [18, 4, 1]&#39;),
+ Text(0.9205298013245033, 0.5, &#39;x[2709] &lt;= 0.146\ngini = 0.105\nsamples = 18\nvalue = [17, 0, 1]&#39;),
+ Text(0.9072847682119205, 0.4090909090909091, &#39;gini = 0.0\nsamples = 17\nvalue = [17, 0, 0]&#39;),
+ Text(0.9337748344370861, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.9735099337748344, 0.5, &#39;x[2898] &lt;= 0.103\ngini = 0.32\nsamples = 5\nvalue = [1, 4, 0]&#39;),
+ Text(0.9602649006622517, 0.4090909090909091, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
+ Text(0.9867549668874173, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;)]
+</pre></div>
+</div>
+<img alt="_images/759d842d0f60fb8ed40ba13707430a881c7d5def80d762a7ed7bdb048cf09a45.png" src="_images/759d842d0f60fb8ed40ba13707430a881c7d5def80d762a7ed7bdb048cf09a45.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decision Tree depth : &#39;</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">get_depth</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decision Tree n leaves : &#39;</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">get_n_leaves</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decision Tree depth :  10
+Decision Tree n leaves :  70
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="evaluation">
+<h1>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_tfidf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Report the confusion matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[79 10 24]
+ [21 17 11]
+ [19  6 51]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">plot_confusion_matrix</span>
+
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test_tfidf</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ImportError</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-16-ebf404216b11&gt;</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">plot_confusion_matrix</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test_tfidf</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="ne">ImportError</span>: cannot import name &#39;plot_confusion_matrix&#39; from &#39;sklearn.metrics&#39; (/usr/local/lib/python3.9/dist-packages/sklearn/metrics/__init__.py)
+
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NOTE</span>: If your import is failing due to a missing package, you can
+<span class="n">manually</span> <span class="n">install</span> <span class="n">dependencies</span> <span class="n">using</span> <span class="n">either</span> <span class="o">!</span>pip<span class="w"> </span>or<span class="w"> </span>!apt.
+
+<span class="n">To</span> <span class="n">view</span> <span class="n">examples</span> <span class="n">of</span> <span class="n">installing</span> <span class="n">some</span> <span class="n">common</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">click</span> <span class="n">the</span>
+<span class="s2">&quot;Open Examples&quot;</span> <span class="n">button</span> <span class="n">below</span><span class="o">.</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print a classification report</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+
+<span class="c1"># Print the overall metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy score : &#39;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Precision score : &#39;</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Recall score : &#39;</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;F1 score : &#39;</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="export-model">
+<h1>Export Model<a class="headerlink" href="#export-model" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">joblib</span> <span class="kn">import</span> <span class="n">dump</span>
+
+<span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;model/dtc-model-abstrak.joblib&quot;</span><span class="p">)</span>
+<span class="n">dump</span><span class="p">(</span><span class="n">vectorizer</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;model/vectorizer_model_abstrak.joblib&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="demo">
+<h1>Demo<a class="headerlink" href="#demo" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Abstrak Skripsi:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">catatan input:</span>
+<span class="sd">sisinta um adalah sistem informasi berbasis website bertujuan untuk menampilkan data yang berkaitan dengan skripsi dan tugas akhir pada jurusan teknik elektro fakultas teknik universitas negeri malang. penggunaan sistem informasi sisinta memiliki potensi jika dikembangkan dengan mengklasifikasikan judul dan abstrak berdasarkan tema penelitiannya. tujuan penelitian ini adalah untuk menerapkan dan menguji performa algoritma decision tree classifier dalam mengklasifikasi judul skripsi dan tugas akhir, berdasarkan tema penelitian dalam kbk di jurusan teknik elektro ft um. decision tree classifier adalah algoritma supervised learning non-parametrik, yang digunakan untuk klasifikasi dan regresi. decision tree memiliki hierarki, struktur pohon, yang terdiri dari root node, branches, internal nodes dan leaf nodes. dengan menggunakan metode decision tree classifier dalam implementasinya diharapkan dapat memprediksi jenis kelompok bidang keahlian yang sesuai. data yang digunakan dalam penelitian sistem klasifikasi ini didapatkan dari database sisinta te-um berupa judul, abstrak, dan kbk yang terkait dengan tema penelitian pada skripsi dan tugas akhir tersebut.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">title_input</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Abstrak Skripsi: </span><span class="si">{</span><span class="n">title_input</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">list1</span> <span class="o">=</span> <span class="n">hasil</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="bp">cls</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">classes_</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Kelompok Bidang Keahlian&quot;</span><span class="p">:</span><span class="n">list2</span><span class="p">,</span><span class="s2">&quot;Probability&quot;</span><span class="p">:</span><span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
+<span class="n">df_proba</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df_proba</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Probability&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Load Preprocessed Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-extraction-tf-idf">Feature Extraction: TF-IDF</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#oversampling-smote">Oversampling: SMOTE</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#training-model">Training Model</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gridsearchcv">GridSearchCV</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#export-model">Export Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#demo">Demo</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dimas Mahardika
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
