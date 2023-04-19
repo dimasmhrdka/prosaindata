@@ -63,6 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'UTS';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tugas 4 (Graph)" href="Tugas4.html" />
     <link rel="prev" title="Tugas 3 (Data Timeseries)" href="Tugas3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -162,10 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Tugas2.html"><strong>Tugas 2 (Pipelines)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas3.html"><strong>Tugas 3 (Data Timeseries)</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>UTS</strong></a></li>
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="Tugas4.html"><strong>Tugas 4 (Graph)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas5.html"><strong>Tugas 5 (Pagerank)</strong></a></li>
 </ul>
 
     </div>
@@ -359,22 +358,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>UTS</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-pta">Crawling data PTA</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exploration">Data Exploration</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#text-preprocessing">Text Preprocessing</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cleaning">Text Cleaning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-missing-values">Remove Missing Values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-duplicate-values">Remove Duplicate Values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">Tokenization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop-words-removal">Stop Words Removal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">Stemming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-cleaned-data">Export Cleaned Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-pta">Crawling data PTA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exploration">Data Exploration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-preprocessing">Text Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cleaning">Text Cleaning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-missing-values">Remove Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-duplicate-values">Remove Duplicate Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">Tokenization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stop-words-removal">Stop Words Removal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">Stemming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-cleaned-data">Export Cleaned Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -398,9 +396,8 @@ document.write(`
 <li><p>memperbaiki slank word (kata tidak baku)</p></li>
 <li><p>stemming (mengubah kata menjadi kata dasar)</p></li>
 </ul>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="crawling-data-pta">
-<h1>Crawling data PTA<a class="headerlink" href="#crawling-data-pta" title="Permalink to this heading">#</a></h1>
+<div class="section" id="crawling-data-pta">
+<h2>Crawling data PTA<a class="headerlink" href="#crawling-data-pta" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -450,8 +447,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="load-data">
-<h1>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h1>
+<div class="section" id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -471,7 +468,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a8f6037d-b832-462b-9085-d82d02b7872d">
+  <div id="df-a2b6fa29-0a92-4236-8220-a10218d8f11e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -542,7 +539,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a8f6037d-b832-462b-9085-d82d02b7872d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a2b6fa29-0a92-4236-8220-a10218d8f11e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -593,12 +590,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a8f6037d-b832-462b-9085-d82d02b7872d button.colab-df-convert');
+          document.querySelector('#df-a2b6fa29-0a92-4236-8220-a10218d8f11e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a8f6037d-b832-462b-9085-d82d02b7872d');
+          const element = document.querySelector('#df-a2b6fa29-0a92-4236-8220-a10218d8f11e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -620,8 +617,8 @@ document.write(`
   </div></div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="data-exploration">
-<h1>Data Exploration<a class="headerlink" href="#data-exploration" title="Permalink to this heading">#</a></h1>
+<div class="section" id="data-exploration">
+<h2>Data Exploration<a class="headerlink" href="#data-exploration" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># count nan value</span>
@@ -689,7 +686,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-14ff8160-cb19-44bc-8d19-a53846599ae0">
+  <div id="df-ef4df569-5ed6-483a-b2cb-4a00663c7e19">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -760,7 +757,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-14ff8160-cb19-44bc-8d19-a53846599ae0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ef4df569-5ed6-483a-b2cb-4a00663c7e19')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -811,12 +808,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-14ff8160-cb19-44bc-8d19-a53846599ae0 button.colab-df-convert');
+          document.querySelector('#df-ef4df569-5ed6-483a-b2cb-4a00663c7e19 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-14ff8160-cb19-44bc-8d19-a53846599ae0');
+          const element = document.querySelector('#df-ef4df569-5ed6-483a-b2cb-4a00663c7e19');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -867,10 +864,10 @@ Name: Kelas, dtype: int64
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="text-preprocessing">
-<h1>Text Preprocessing<a class="headerlink" href="#text-preprocessing" title="Permalink to this heading">#</a></h1>
+<div class="section" id="text-preprocessing">
+<h2>Text Preprocessing<a class="headerlink" href="#text-preprocessing" title="Permalink to this heading">#</a></h2>
 <div class="section" id="text-cleaning">
-<h2>Text Cleaning<a class="headerlink" href="#text-cleaning" title="Permalink to this heading">#</a></h2>
+<h3>Text Cleaning<a class="headerlink" href="#text-cleaning" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">string</span>
@@ -916,7 +913,7 @@ Name: Kelas, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aea97b04-581d-4e02-9259-0675f6ef0d47">
+  <div id="df-499a5a31-1910-4897-86e0-9378d31a772d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -987,7 +984,7 @@ Name: Kelas, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aea97b04-581d-4e02-9259-0675f6ef0d47')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-499a5a31-1910-4897-86e0-9378d31a772d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1038,12 +1035,12 @@ Name: Kelas, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aea97b04-581d-4e02-9259-0675f6ef0d47 button.colab-df-convert');
+          document.querySelector('#df-499a5a31-1910-4897-86e0-9378d31a772d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aea97b04-581d-4e02-9259-0675f6ef0d47');
+          const element = document.querySelector('#df-499a5a31-1910-4897-86e0-9378d31a772d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1074,7 +1071,7 @@ Name: Kelas, dtype: int64
 </div>
 </div>
 <div class="section" id="remove-missing-values">
-<h2>Remove Missing Values<a class="headerlink" href="#remove-missing-values" title="Permalink to this heading">#</a></h2>
+<h3>Remove Missing Values<a class="headerlink" href="#remove-missing-values" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ubah empty string menjadi NaN value</span>
@@ -1117,7 +1114,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="remove-duplicate-values">
-<h2>Remove Duplicate Values<a class="headerlink" href="#remove-duplicate-values" title="Permalink to this heading">#</a></h2>
+<h3>Remove Duplicate Values<a class="headerlink" href="#remove-duplicate-values" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cek apakah terdapat duplikasi data pada kolom judul</span>
@@ -1127,7 +1124,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bbd7fef7-2ef3-4e2b-9fa4-9f06a19c4011">
+  <div id="df-ef464311-bde5-4a09-a28e-ef72112bd103">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1166,7 +1163,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bbd7fef7-2ef3-4e2b-9fa4-9f06a19c4011')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ef464311-bde5-4a09-a28e-ef72112bd103')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1217,12 +1214,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bbd7fef7-2ef3-4e2b-9fa4-9f06a19c4011 button.colab-df-convert');
+          document.querySelector('#df-ef464311-bde5-4a09-a28e-ef72112bd103 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bbd7fef7-2ef3-4e2b-9fa4-9f06a19c4011');
+          const element = document.querySelector('#df-ef464311-bde5-4a09-a28e-ef72112bd103');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1255,7 +1252,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b4f66340-c286-424d-89c0-13c97bf60918">
+  <div id="df-456421e7-1d7c-480b-9f03-e9ad277a175a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1286,7 +1283,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b4f66340-c286-424d-89c0-13c97bf60918')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-456421e7-1d7c-480b-9f03-e9ad277a175a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1337,12 +1334,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b4f66340-c286-424d-89c0-13c97bf60918 button.colab-df-convert');
+          document.querySelector('#df-456421e7-1d7c-480b-9f03-e9ad277a175a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b4f66340-c286-424d-89c0-13c97bf60918');
+          const element = document.querySelector('#df-456421e7-1d7c-480b-9f03-e9ad277a175a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1372,7 +1369,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8f649e9a-583e-4ac3-ae11-f20388cefed6">
+  <div id="df-29e2a17d-4a66-4ba8-ae9c-fe6617b437ae">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1403,7 +1400,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8f649e9a-583e-4ac3-ae11-f20388cefed6')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-29e2a17d-4a66-4ba8-ae9c-fe6617b437ae')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1454,12 +1451,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8f649e9a-583e-4ac3-ae11-f20388cefed6 button.colab-df-convert');
+          document.querySelector('#df-29e2a17d-4a66-4ba8-ae9c-fe6617b437ae button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8f649e9a-583e-4ac3-ae11-f20388cefed6');
+          const element = document.querySelector('#df-29e2a17d-4a66-4ba8-ae9c-fe6617b437ae');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1492,7 +1489,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-634ba4ac-dbdc-4a2b-b533-90b3995091cf">
+  <div id="df-d168975c-1a90-4b47-b774-be1fd599956d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1523,7 +1520,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-634ba4ac-dbdc-4a2b-b533-90b3995091cf')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d168975c-1a90-4b47-b774-be1fd599956d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1574,12 +1571,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-634ba4ac-dbdc-4a2b-b533-90b3995091cf button.colab-df-convert');
+          document.querySelector('#df-d168975c-1a90-4b47-b774-be1fd599956d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-634ba4ac-dbdc-4a2b-b533-90b3995091cf');
+          const element = document.querySelector('#df-d168975c-1a90-4b47-b774-be1fd599956d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1622,7 +1619,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="tokenization">
-<h2>Tokenization<a class="headerlink" href="#tokenization" title="Permalink to this heading">#</a></h2>
+<h3>Tokenization<a class="headerlink" href="#tokenization" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
@@ -1648,7 +1645,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-00524015-d5de-40dd-8a10-b322608aeb62">
+  <div id="df-13b93821-08ef-4f0a-9449-9b4b3c445453">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1701,7 +1698,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-00524015-d5de-40dd-8a10-b322608aeb62')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-13b93821-08ef-4f0a-9449-9b4b3c445453')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1752,12 +1749,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-00524015-d5de-40dd-8a10-b322608aeb62 button.colab-df-convert');
+          document.querySelector('#df-13b93821-08ef-4f0a-9449-9b4b3c445453 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-00524015-d5de-40dd-8a10-b322608aeb62');
+          const element = document.querySelector('#df-13b93821-08ef-4f0a-9449-9b4b3c445453');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1788,7 +1785,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7098f1fe-f818-4ad9-a198-71f7f465efa2">
+  <div id="df-aaeaebe0-c37b-469d-88cc-3378f99bafe0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1841,7 +1838,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7098f1fe-f818-4ad9-a198-71f7f465efa2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-aaeaebe0-c37b-469d-88cc-3378f99bafe0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1892,12 +1889,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7098f1fe-f818-4ad9-a198-71f7f465efa2 button.colab-df-convert');
+          document.querySelector('#df-aaeaebe0-c37b-469d-88cc-3378f99bafe0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7098f1fe-f818-4ad9-a198-71f7f465efa2');
+          const element = document.querySelector('#df-aaeaebe0-c37b-469d-88cc-3378f99bafe0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1920,7 +1917,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="stop-words-removal">
-<h2>Stop Words Removal<a class="headerlink" href="#stop-words-removal" title="Permalink to this heading">#</a></h2>
+<h3>Stop Words Removal<a class="headerlink" href="#stop-words-removal" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span> 
@@ -1942,7 +1939,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9fabdb77-dfdd-410f-b08d-d0d1b8940f52">
+  <div id="df-0900cb7e-08f7-4f3d-b246-422991120d67">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1995,7 +1992,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9fabdb77-dfdd-410f-b08d-d0d1b8940f52')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0900cb7e-08f7-4f3d-b246-422991120d67')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2046,12 +2043,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9fabdb77-dfdd-410f-b08d-d0d1b8940f52 button.colab-df-convert');
+          document.querySelector('#df-0900cb7e-08f7-4f3d-b246-422991120d67 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9fabdb77-dfdd-410f-b08d-d0d1b8940f52');
+          const element = document.querySelector('#df-0900cb7e-08f7-4f3d-b246-422991120d67');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2080,7 +2077,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6daaebde-a44d-497c-9a24-c2303a998049">
+  <div id="df-f8b49a61-2e51-4039-b8ff-8528166fb706">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2133,7 +2130,7 @@ dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6daaebde-a44d-497c-9a24-c2303a998049')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f8b49a61-2e51-4039-b8ff-8528166fb706')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2184,12 +2181,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6daaebde-a44d-497c-9a24-c2303a998049 button.colab-df-convert');
+          document.querySelector('#df-f8b49a61-2e51-4039-b8ff-8528166fb706 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6daaebde-a44d-497c-9a24-c2303a998049');
+          const element = document.querySelector('#df-f8b49a61-2e51-4039-b8ff-8528166fb706');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2212,7 +2209,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="stemming">
-<h2>Stemming<a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h2>
+<h3>Stemming<a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>sastrawi
@@ -2221,18 +2218,20 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting sastrawi
-  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">204.8/209.7 KB</span> <span class=" -Color -Color-Red">6.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 KB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">204.8/209.7 kB</span> <span class=" -Color -Color-Red">6.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: sastrawi
-Successfully installed sastrawi-1.0.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed sastrawi-1.0.1
 </pre></div>
 </div>
 </div>
@@ -2257,7 +2256,7 @@ Successfully installed sastrawi-1.0.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9038d3c1c85f46bd87bbdb27d7e4e6da"}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "bb9871c7f98245cf9d333b9c5b6dccb7"}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-31-e0b86e6d011c&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Stemming judul</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;judul_tokens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;judul_tokens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">progress_apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
@@ -2270,25 +2269,25 @@ Successfully installed sastrawi-1.0.1
 <span class="g g-Whitespace">    </span><span class="mi">807</span>                     <span class="n">t</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4431</span>         <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
-<span class="g g-Whitespace">   </span><span class="mi">4432</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">4433</span><span class="sd">         return SeriesApply(self, func, convert_dtype, args, kwargs).apply()</span>
-<span class="g g-Whitespace">   </span><span class="mi">4434</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">4435</span><span class="sd">     def _reduce(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4769</span>         <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+<span class="g g-Whitespace">   </span><span class="mi">4770</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">4771</span><span class="sd">         return SeriesApply(self, func, convert_dtype, args, kwargs).apply()</span>
+<span class="g g-Whitespace">   </span><span class="mi">4772</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">4773</span><span class="sd">     def _reduce(</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1086</span><span class="sd">             return self.apply_str()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1087</span><span class="sd"> </span>
-<span class="ne">-&gt; </span><span class="mi">1088</span><span class="sd">         return self.apply_standard()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1089</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1090</span><span class="sd">     def agg(self):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1121</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1122</span><span class="sd">         # self.f is Callable</span>
+<span class="ne">-&gt; </span><span class="mi">1123</span><span class="sd">         return self.apply_standard()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1124</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1125</span><span class="sd">     def agg(self):</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply_standard</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1141</span><span class="sd">                 # List[Union[Callable[..., Any], str]]]]]&quot;; expected</span>
-<span class="g g-Whitespace">   </span><span class="mi">1142</span><span class="sd">                 # &quot;Callable[[Any], Any]&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1143</span><span class="sd">                 mapped = lib.map_infer(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1144</span><span class="sd">                     values,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1145</span><span class="sd">                     f,  # type: ignore[arg-type]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span><span class="sd">                 values = obj.astype(object)._values</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span><span class="sd">                 mapped = lib.map_infer(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span><span class="sd">                     values,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span><span class="sd">                     f,</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/lib.pyx</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
 
@@ -2353,11 +2352,25 @@ Successfully installed sastrawi-1.0.1
 <span class="g g-Whitespace">     </span><span class="mi">91</span><span class="s2">                 return</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span><span class="s2">         removalCount = len(self.removals)</span>
 <span class="g g-Whitespace">    </span><span class="mi">109</span><span class="s2">         for visitor in visitors:</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="s2">             self.accept(visitor)</span>
-<span class="ne">--&gt; </span><span class="mi">111</span><span class="s2">             if self.dictionary.contains(self.current_word):</span>
+<span class="ne">--&gt; </span><span class="mi">110</span><span class="s2">             self.accept(visitor)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="s2">             if self.dictionary.contains(self.current_word):</span>
 <span class="g g-Whitespace">    </span><span class="mi">112</span><span class="s2">                 return self.current_word</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="s2">             if self.process_is_stopped:</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept</span><span class="nt">(self, visitor)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2">     def accept(self, visitor):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span><span class="s2">         visitor.visit(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="s2">     def accept_visitors(self, visitors):</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Visitor/AbstractDisambiguatePrefixRule.py</span> in <span class="ni">visit</span><span class="nt">(self, context)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span><span class="s2">         for disambiguator in self.disambiguators:</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span><span class="s2">             result = disambiguator.disambiguate(context.current_word)</span>
+<span class="ne">---&gt; </span><span class="mi">15</span><span class="s2">             if context.dictionary.contains(result):</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span><span class="s2">                 break</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span><span class="s2"> </span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -2655,7 +2668,7 @@ Successfully installed sastrawi-1.0.1
 </div>
 </div>
 <div class="section" id="export-cleaned-data">
-<h2>Export Cleaned Data<a class="headerlink" href="#export-cleaned-data" title="Permalink to this heading">#</a></h2>
+<h3>Export Cleaned Data<a class="headerlink" href="#export-cleaned-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
@@ -2895,7 +2908,9 @@ Successfully installed sastrawi-1.0.1
 </div>
 </div>
 </div>
-<p>##Modelling</p>
+</div>
+<div class="section" id="modelling">
+<h3>Modelling<a class="headerlink" href="#modelling" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -3150,6 +3165,7 @@ Successfully installed sastrawi-1.0.1
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -3191,6 +3207,15 @@ Successfully installed sastrawi-1.0.1
         <p class="prev-next-title"><strong>Tugas 3 (Data Timeseries)</strong></p>
       </div>
     </a>
+    <a class="right-next"
+       href="Tugas4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Tugas 4 (Graph)</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -3209,22 +3234,21 @@ Successfully installed sastrawi-1.0.1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>UTS</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-pta">Crawling data PTA</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exploration">Data Exploration</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#text-preprocessing">Text Preprocessing</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cleaning">Text Cleaning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-missing-values">Remove Missing Values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-duplicate-values">Remove Duplicate Values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">Tokenization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stop-words-removal">Stop Words Removal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">Stemming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-cleaned-data">Export Cleaned Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-pta">Crawling data PTA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exploration">Data Exploration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-preprocessing">Text Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cleaning">Text Cleaning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-missing-values">Remove Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-duplicate-values">Remove Duplicate Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">Tokenization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stop-words-removal">Stop Words Removal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">Stemming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-cleaned-data">Export Cleaned Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
