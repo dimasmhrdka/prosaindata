@@ -163,6 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="UTS.html"><strong>UTS</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas4.html"><strong>Tugas 4 (Graph)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas5.html"><strong>Tugas 5 (Pagerank)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scrapping.html"><strong>Scrapping Data Coment Youtube</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas6.html"><strong>Tugas 5 (LSA Topic Modelling)</strong></a></li>
 </ul>
 
     </div>
@@ -393,7 +395,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98">
+  <div id="df-e02a29fd-4a85-4b73-9e26-ad4ba5d5d819">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -476,7 +478,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e02a29fd-4a85-4b73-9e26-ad4ba5d5d819')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -527,12 +529,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98 button.colab-df-convert');
+          document.querySelector('#df-e02a29fd-4a85-4b73-9e26-ad4ba5d5d819 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-21ab1f32-a8c0-4501-b4d5-bf78758f4d98');
+          const element = document.querySelector('#df-e02a29fd-4a85-4b73-9e26-ad4ba5d5d819');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -682,242 +684,246 @@ Name: Kelas, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fitting 10 folds for each of 12 candidates, totalling 120 fits
-[CV 1/10] END .....criterion=gini, max_depth=10;, score=0.768 total time=   0.1s
-[CV 2/10] END .....criterion=gini, max_depth=10;, score=0.835 total time=   0.1s
+[CV 1/10] END .....criterion=gini, max_depth=10;, score=0.776 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .....criterion=gini, max_depth=10;, score=0.810 total time=   0.1s
-[CV 4/10] END .....criterion=gini, max_depth=10;, score=0.816 total time=   0.1s
-[CV 5/10] END .....criterion=gini, max_depth=10;, score=0.864 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 2/10] END .....criterion=gini, max_depth=10;, score=0.816 total time=   0.1s
+[CV 3/10] END .....criterion=gini, max_depth=10;, score=0.809 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 6/10] END .....criterion=gini, max_depth=10;, score=0.857 total time=   0.1s
-[CV 7/10] END .....criterion=gini, max_depth=10;, score=0.924 total time=   0.1s
-[CV 8/10] END .....criterion=gini, max_depth=10;, score=0.850 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 4/10] END .....criterion=gini, max_depth=10;, score=0.810 total time=   0.1s
+[CV 5/10] END .....criterion=gini, max_depth=10;, score=0.856 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .....criterion=gini, max_depth=10;, score=0.849 total time=   0.1s
-[CV 10/10] END ....criterion=gini, max_depth=10;, score=0.913 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 6/10] END .....criterion=gini, max_depth=10;, score=0.831 total time=   0.1s
+[CV 7/10] END .....criterion=gini, max_depth=10;, score=0.938 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .....criterion=gini, max_depth=20;, score=0.744 total time=   0.1s
-[CV 2/10] END .....criterion=gini, max_depth=20;, score=0.752 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 8/10] END .....criterion=gini, max_depth=10;, score=0.880 total time=   0.1s
+[CV 9/10] END .....criterion=gini, max_depth=10;, score=0.842 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .....criterion=gini, max_depth=20;, score=0.771 total time=   0.1s
-[CV 4/10] END .....criterion=gini, max_depth=20;, score=0.775 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 10/10] END ....criterion=gini, max_depth=10;, score=0.886 total time=   0.1s
+[CV 1/10] END .....criterion=gini, max_depth=20;, score=0.744 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .....criterion=gini, max_depth=20;, score=0.842 total time=   0.1s
-[CV 6/10] END .....criterion=gini, max_depth=20;, score=0.858 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 2/10] END .....criterion=gini, max_depth=20;, score=0.752 total time=   0.2s
+[CV 3/10] END .....criterion=gini, max_depth=20;, score=0.746 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .....criterion=gini, max_depth=20;, score=0.896 total time=   0.1s
-[CV 8/10] END .....criterion=gini, max_depth=20;, score=0.875 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 4/10] END .....criterion=gini, max_depth=20;, score=0.750 total time=   0.2s
+[CV 5/10] END .....criterion=gini, max_depth=20;, score=0.844 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .....criterion=gini, max_depth=20;, score=0.858 total time=   0.1s
-[CV 10/10] END ....criterion=gini, max_depth=20;, score=0.875 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 6/10] END .....criterion=gini, max_depth=20;, score=0.858 total time=   0.2s
+[CV 7/10] END .....criterion=gini, max_depth=20;, score=0.882 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .....criterion=gini, max_depth=30;, score=0.760 total time=   0.1s
-[CV 2/10] END .....criterion=gini, max_depth=30;, score=0.802 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 8/10] END .....criterion=gini, max_depth=20;, score=0.892 total time=   0.2s
+[CV 9/10] END .....criterion=gini, max_depth=20;, score=0.867 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .....criterion=gini, max_depth=30;, score=0.761 total time=   0.1s
-[CV 4/10] END .....criterion=gini, max_depth=30;, score=0.825 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 10/10] END ....criterion=gini, max_depth=20;, score=0.883 total time=   0.2s
+[CV 1/10] END .....criterion=gini, max_depth=30;, score=0.744 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .....criterion=gini, max_depth=30;, score=0.817 total time=   0.1s
-[CV 6/10] END .....criterion=gini, max_depth=30;, score=0.858 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 2/10] END .....criterion=gini, max_depth=30;, score=0.777 total time=   0.2s
+[CV 3/10] END .....criterion=gini, max_depth=30;, score=0.752 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .....criterion=gini, max_depth=30;, score=0.892 total time=   0.1s
-[CV 8/10] END .....criterion=gini, max_depth=30;, score=0.883 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 4/10] END .....criterion=gini, max_depth=30;, score=0.775 total time=   0.2s
+[CV 5/10] END .....criterion=gini, max_depth=30;, score=0.817 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .....criterion=gini, max_depth=30;, score=0.858 total time=   0.1s
-[CV 10/10] END ....criterion=gini, max_depth=30;, score=0.900 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 6/10] END .....criterion=gini, max_depth=30;, score=0.842 total time=   0.2s
+[CV 7/10] END .....criterion=gini, max_depth=30;, score=0.908 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ...criterion=gini, max_depth=None;, score=0.760 total time=   0.1s
-[CV 2/10] END ...criterion=gini, max_depth=None;, score=0.760 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 8/10] END .....criterion=gini, max_depth=30;, score=0.842 total time=   0.2s
+[CV 9/10] END .....criterion=gini, max_depth=30;, score=0.850 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ...criterion=gini, max_depth=None;, score=0.761 total time=   0.1s
-[CV 4/10] END ...criterion=gini, max_depth=None;, score=0.792 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 10/10] END ....criterion=gini, max_depth=30;, score=0.883 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ...criterion=gini, max_depth=None;, score=0.817 total time=   0.1s
-[CV 6/10] END ...criterion=gini, max_depth=None;, score=0.850 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ...criterion=gini, max_depth=None;, score=0.761 total time=   0.2s
+[CV 2/10] END ...criterion=gini, max_depth=None;, score=0.777 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ...criterion=gini, max_depth=None;, score=0.917 total time=   0.2s
-[CV 8/10] END ...criterion=gini, max_depth=None;, score=0.883 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ...criterion=gini, max_depth=None;, score=0.761 total time=   0.2s
+[CV 4/10] END ...criterion=gini, max_depth=None;, score=0.792 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ...criterion=gini, max_depth=None;, score=0.867 total time=   0.2s
-[CV 10/10] END ..criterion=gini, max_depth=None;, score=0.900 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ...criterion=gini, max_depth=None;, score=0.833 total time=   0.1s
+[CV 6/10] END ...criterion=gini, max_depth=None;, score=0.833 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=10;, score=0.770 total time=   0.2s
-[CV 2/10] END ..criterion=entropy, max_depth=10;, score=0.770 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ...criterion=gini, max_depth=None;, score=0.892 total time=   0.1s
+[CV 8/10] END ...criterion=gini, max_depth=None;, score=0.892 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=10;, score=0.875 total time=   0.2s
-[CV 4/10] END ..criterion=entropy, max_depth=10;, score=0.821 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ...criterion=gini, max_depth=None;, score=0.850 total time=   0.1s
+[CV 10/10] END ..criterion=gini, max_depth=None;, score=0.883 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=10;, score=0.822 total time=   0.2s
-[CV 6/10] END ..criterion=entropy, max_depth=10;, score=0.856 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=10;, score=0.751 total time=   0.1s
+[CV 2/10] END ..criterion=entropy, max_depth=10;, score=0.760 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=10;, score=0.927 total time=   0.2s
-[CV 8/10] END ..criterion=entropy, max_depth=10;, score=0.833 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=10;, score=0.847 total time=   0.1s
+[CV 4/10] END ..criterion=entropy, max_depth=10;, score=0.803 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=10;, score=0.873 total time=   0.2s
-[CV 10/10] END .criterion=entropy, max_depth=10;, score=0.920 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=10;, score=0.841 total time=   0.1s
+[CV 6/10] END ..criterion=entropy, max_depth=10;, score=0.856 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=20;, score=0.720 total time=   0.2s
-[CV 2/10] END ..criterion=entropy, max_depth=20;, score=0.711 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=10;, score=0.947 total time=   0.1s
+[CV 8/10] END ..criterion=entropy, max_depth=10;, score=0.811 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=20;, score=0.785 total time=   0.2s
-[CV 4/10] END ..criterion=entropy, max_depth=20;, score=0.767 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=10;, score=0.878 total time=   0.1s
+[CV 10/10] END .criterion=entropy, max_depth=10;, score=0.911 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=20;, score=0.758 total time=   0.2s
-[CV 6/10] END ..criterion=entropy, max_depth=20;, score=0.817 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=20;, score=0.728 total time=   0.1s
+[CV 2/10] END ..criterion=entropy, max_depth=20;, score=0.719 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=20;, score=0.875 total time=   0.2s
-[CV 8/10] END ..criterion=entropy, max_depth=20;, score=0.800 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=20;, score=0.802 total time=   0.1s
+[CV 4/10] END ..criterion=entropy, max_depth=20;, score=0.783 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=20;, score=0.875 total time=   0.2s
-[CV 10/10] END .criterion=entropy, max_depth=20;, score=0.892 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=20;, score=0.767 total time=   0.1s
+[CV 6/10] END ..criterion=entropy, max_depth=20;, score=0.825 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=30;, score=0.711 total time=   0.2s
-[CV 2/10] END ..criterion=entropy, max_depth=30;, score=0.719 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=20;, score=0.900 total time=   0.1s
+[CV 8/10] END ..criterion=entropy, max_depth=20;, score=0.800 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=30;, score=0.827 total time=   0.2s
-[CV 4/10] END ..criterion=entropy, max_depth=30;, score=0.783 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=20;, score=0.858 total time=   0.1s
+[CV 10/10] END .criterion=entropy, max_depth=20;, score=0.900 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=30;, score=0.750 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END ..criterion=entropy, max_depth=30;, score=0.744 total time=   0.1s
+[CV 2/10] END ..criterion=entropy, max_depth=30;, score=0.736 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END ..criterion=entropy, max_depth=30;, score=0.819 total time=   0.1s
+[CV 4/10] END ..criterion=entropy, max_depth=30;, score=0.783 total time=   0.1s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END ..criterion=entropy, max_depth=30;, score=0.758 total time=   0.1s
 [CV 6/10] END ..criterion=entropy, max_depth=30;, score=0.833 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=30;, score=0.875 total time=   0.1s
-[CV 8/10] END ..criterion=entropy, max_depth=30;, score=0.783 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END ..criterion=entropy, max_depth=30;, score=0.892 total time=   0.1s
+[CV 8/10] END ..criterion=entropy, max_depth=30;, score=0.833 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=30;, score=0.850 total time=   0.1s
-[CV 10/10] END .criterion=entropy, max_depth=30;, score=0.908 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END ..criterion=entropy, max_depth=30;, score=0.883 total time=   0.1s
+[CV 10/10] END .criterion=entropy, max_depth=30;, score=0.900 total time=   0.1s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END criterion=entropy, max_depth=None;, score=0.736 total time=   0.1s
-[CV 2/10] END criterion=entropy, max_depth=None;, score=0.727 total time=   0.1s
+[CV 2/10] END criterion=entropy, max_depth=None;, score=0.719 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END criterion=entropy, max_depth=None;, score=0.827 total time=   0.1s
-[CV 4/10] END criterion=entropy, max_depth=None;, score=0.783 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END criterion=entropy, max_depth=None;, score=0.810 total time=   0.1s
+[CV 4/10] END criterion=entropy, max_depth=None;, score=0.767 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END criterion=entropy, max_depth=None;, score=0.775 total time=   0.1s
-[CV 6/10] END criterion=entropy, max_depth=None;, score=0.817 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END criterion=entropy, max_depth=None;, score=0.767 total time=   0.1s
+[CV 6/10] END criterion=entropy, max_depth=None;, score=0.825 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END criterion=entropy, max_depth=None;, score=0.875 total time=   0.1s
-[CV 8/10] END criterion=entropy, max_depth=None;, score=0.800 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END criterion=entropy, max_depth=None;, score=0.867 total time=   0.1s
+[CV 8/10] END criterion=entropy, max_depth=None;, score=0.817 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END criterion=entropy, max_depth=None;, score=0.825 total time=   0.1s
-[CV 10/10] END criterion=entropy, max_depth=None;, score=0.892 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END criterion=entropy, max_depth=None;, score=0.850 total time=   0.1s
+[CV 10/10] END criterion=entropy, max_depth=None;, score=0.925 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=10;, score=0.746 total time=   0.1s
-[CV 2/10] END .criterion=log_loss, max_depth=10;, score=0.739 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=10;, score=0.781 total time=   0.1s
+[CV 2/10] END .criterion=log_loss, max_depth=10;, score=0.750 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=10;, score=0.835 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=10;, score=0.813 total time=   0.1s
 [CV 4/10] END .criterion=log_loss, max_depth=10;, score=0.802 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=10;, score=0.832 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=10;, score=0.839 total time=   0.1s
 [CV 6/10] END .criterion=log_loss, max_depth=10;, score=0.866 total time=   0.1s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=10;, score=0.928 total time=   0.1s
-[CV 8/10] END .criterion=log_loss, max_depth=10;, score=0.843 total time=   0.1s
+[CV 8/10] END .criterion=log_loss, max_depth=10;, score=0.833 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=10;, score=0.860 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=10;, score=0.880 total time=   0.1s
 [CV 10/10] END criterion=log_loss, max_depth=10;, score=0.930 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=20;, score=0.711 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=20;, score=0.728 total time=   0.1s
 [CV 2/10] END .criterion=log_loss, max_depth=20;, score=0.719 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=20;, score=0.777 total time=   0.1s
-[CV 4/10] END .criterion=log_loss, max_depth=20;, score=0.783 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=20;, score=0.835 total time=   0.1s
+[CV 4/10] END .criterion=log_loss, max_depth=20;, score=0.792 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=20;, score=0.758 total time=   0.1s
-[CV 6/10] END .criterion=log_loss, max_depth=20;, score=0.825 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=20;, score=0.783 total time=   0.1s
+[CV 6/10] END .criterion=log_loss, max_depth=20;, score=0.833 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=20;, score=0.883 total time=   0.1s
-[CV 8/10] END .criterion=log_loss, max_depth=20;, score=0.808 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=20;, score=0.892 total time=   0.1s
+[CV 8/10] END .criterion=log_loss, max_depth=20;, score=0.800 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=20;, score=0.867 total time=   0.1s
-[CV 10/10] END criterion=log_loss, max_depth=20;, score=0.892 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=20;, score=0.858 total time=   0.1s
+[CV 10/10] END criterion=log_loss, max_depth=20;, score=0.883 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=30;, score=0.744 total time=   0.1s
-[CV 2/10] END .criterion=log_loss, max_depth=30;, score=0.719 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END .criterion=log_loss, max_depth=30;, score=0.745 total time=   0.1s
+[CV 2/10] END .criterion=log_loss, max_depth=30;, score=0.710 total time=   0.1s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END .criterion=log_loss, max_depth=30;, score=0.810 total time=   0.1s
-[CV 4/10] END .criterion=log_loss, max_depth=30;, score=0.783 total time=   0.1s
+[CV 4/10] END .criterion=log_loss, max_depth=30;, score=0.758 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=30;, score=0.742 total time=   0.1s
-[CV 6/10] END .criterion=log_loss, max_depth=30;, score=0.833 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END .criterion=log_loss, max_depth=30;, score=0.750 total time=   0.1s
+[CV 6/10] END .criterion=log_loss, max_depth=30;, score=0.850 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=30;, score=0.883 total time=   0.1s
-[CV 8/10] END .criterion=log_loss, max_depth=30;, score=0.817 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END .criterion=log_loss, max_depth=30;, score=0.875 total time=   0.1s
+[CV 8/10] END .criterion=log_loss, max_depth=30;, score=0.833 total time=   0.1s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END .criterion=log_loss, max_depth=30;, score=0.858 total time=   0.1s
-[CV 10/10] END criterion=log_loss, max_depth=30;, score=0.883 total time=   0.1s
+[CV 10/10] END criterion=log_loss, max_depth=30;, score=0.900 total time=   0.1s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END criterion=log_loss, max_depth=None;, score=0.728 total time=   0.1s
-[CV 2/10] END criterion=log_loss, max_depth=None;, score=0.702 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/10] END criterion=log_loss, max_depth=None;, score=0.736 total time=   0.2s
+[CV 2/10] END criterion=log_loss, max_depth=None;, score=0.694 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END criterion=log_loss, max_depth=None;, score=0.827 total time=   0.1s
-[CV 4/10] END criterion=log_loss, max_depth=None;, score=0.775 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 3/10] END criterion=log_loss, max_depth=None;, score=0.802 total time=   0.2s
+[CV 4/10] END criterion=log_loss, max_depth=None;, score=0.775 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END criterion=log_loss, max_depth=None;, score=0.758 total time=   0.1s
-[CV 6/10] END criterion=log_loss, max_depth=None;, score=0.833 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 5/10] END criterion=log_loss, max_depth=None;, score=0.775 total time=   0.2s
+[CV 6/10] END criterion=log_loss, max_depth=None;, score=0.825 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END criterion=log_loss, max_depth=None;, score=0.883 total time=   0.1s
-[CV 8/10] END criterion=log_loss, max_depth=None;, score=0.825 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 7/10] END criterion=log_loss, max_depth=None;, score=0.900 total time=   0.2s
+[CV 8/10] END criterion=log_loss, max_depth=None;, score=0.817 total time=   0.2s
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END criterion=log_loss, max_depth=None;, score=0.842 total time=   0.1s
-[CV 10/10] END criterion=log_loss, max_depth=None;, score=0.917 total time=   0.1s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 9/10] END criterion=log_loss, max_depth=None;, score=0.850 total time=   0.2s
+[CV 10/10] END criterion=log_loss, max_depth=None;, score=0.892 total time=   0.2s
 </pre></div>
 </div>
 <div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=10, estimator=DecisionTreeClassifier(),
@@ -938,7 +944,7 @@ Name: Kelas, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7">
+  <div id="df-6e948881-39fc-4cdf-8524-7532ebe31dfa">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -983,284 +989,284 @@ Name: Kelas, dtype: int64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.085645</td>
-      <td>0.006490</td>
-      <td>0.004321</td>
-      <td>0.000640</td>
+      <td>0.122810</td>
+      <td>0.007344</td>
+      <td>0.006028</td>
+      <td>0.000444</td>
       <td>gini</td>
       <td>10</td>
       <td>{'criterion': 'gini', 'max_depth': 10}</td>
-      <td>0.768084</td>
-      <td>0.835108</td>
-      <td>0.809835</td>
-      <td>0.816204</td>
-      <td>0.864444</td>
-      <td>0.856759</td>
-      <td>0.924352</td>
-      <td>0.849722</td>
-      <td>0.848704</td>
-      <td>0.912870</td>
-      <td>0.848608</td>
-      <td>0.044051</td>
+      <td>0.776238</td>
+      <td>0.816374</td>
+      <td>0.809379</td>
+      <td>0.809815</td>
+      <td>0.856204</td>
+      <td>0.831019</td>
+      <td>0.937500</td>
+      <td>0.879630</td>
+      <td>0.842222</td>
+      <td>0.886481</td>
+      <td>0.844486</td>
+      <td>0.044561</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.104434</td>
-      <td>0.005227</td>
-      <td>0.004069</td>
-      <td>0.000388</td>
+      <td>0.153532</td>
+      <td>0.006454</td>
+      <td>0.005488</td>
+      <td>0.000194</td>
       <td>gini</td>
       <td>20</td>
       <td>{'criterion': 'gini', 'max_depth': 20}</td>
-      <td>0.744142</td>
-      <td>0.752481</td>
-      <td>0.770556</td>
-      <td>0.775000</td>
-      <td>0.841852</td>
+      <td>0.744096</td>
+      <td>0.752256</td>
+      <td>0.746148</td>
+      <td>0.750000</td>
+      <td>0.843519</td>
       <td>0.858333</td>
-      <td>0.896296</td>
-      <td>0.875000</td>
-      <td>0.858333</td>
-      <td>0.875000</td>
-      <td>0.824699</td>
-      <td>0.054635</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.104320</td>
-      <td>0.005348</td>
-      <td>0.004106</td>
-      <td>0.000533</td>
-      <td>gini</td>
-      <td>30</td>
-      <td>{'criterion': 'gini', 'max_depth': 30}</td>
-      <td>0.760313</td>
-      <td>0.801986</td>
-      <td>0.760723</td>
-      <td>0.825000</td>
-      <td>0.816667</td>
-      <td>0.858333</td>
+      <td>0.881852</td>
       <td>0.891667</td>
-      <td>0.883333</td>
-      <td>0.858333</td>
-      <td>0.900000</td>
-      <td>0.835636</td>
-      <td>0.048454</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.127432</td>
-      <td>0.025003</td>
-      <td>0.004995</td>
-      <td>0.001115</td>
-      <td>gini</td>
-      <td>None</td>
-      <td>{'criterion': 'gini', 'max_depth': None}</td>
-      <td>0.760493</td>
-      <td>0.760410</td>
-      <td>0.760544</td>
-      <td>0.791667</td>
-      <td>0.816667</td>
-      <td>0.850000</td>
-      <td>0.916667</td>
-      <td>0.883333</td>
       <td>0.866667</td>
-      <td>0.900000</td>
-      <td>0.830645</td>
-      <td>0.057568</td>
+      <td>0.883333</td>
+      <td>0.821787</td>
+      <td>0.061519</td>
       <td>5</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>0.155867</td>
+      <td>0.008413</td>
+      <td>0.006745</td>
+      <td>0.002076</td>
+      <td>gini</td>
+      <td>30</td>
+      <td>{'criterion': 'gini', 'max_depth': 30}</td>
+      <td>0.743692</td>
+      <td>0.777481</td>
+      <td>0.752168</td>
+      <td>0.775000</td>
+      <td>0.816667</td>
+      <td>0.841667</td>
+      <td>0.908333</td>
+      <td>0.841667</td>
+      <td>0.850000</td>
+      <td>0.883333</td>
+      <td>0.819001</td>
+      <td>0.052831</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.138537</td>
+      <td>0.041987</td>
+      <td>0.005341</td>
+      <td>0.001435</td>
+      <td>gini</td>
+      <td>None</td>
+      <td>{'criterion': 'gini', 'max_depth': None}</td>
+      <td>0.760538</td>
+      <td>0.776986</td>
+      <td>0.760814</td>
+      <td>0.791667</td>
+      <td>0.833333</td>
+      <td>0.833333</td>
+      <td>0.891667</td>
+      <td>0.891667</td>
+      <td>0.850000</td>
+      <td>0.883333</td>
+      <td>0.827334</td>
+      <td>0.049692</td>
+      <td>4</td>
+    </tr>
+    <tr>
       <th>4</th>
-      <td>0.162629</td>
-      <td>0.006350</td>
-      <td>0.006175</td>
-      <td>0.000832</td>
+      <td>0.104687</td>
+      <td>0.004474</td>
+      <td>0.003931</td>
+      <td>0.000134</td>
       <td>entropy</td>
       <td>10</td>
       <td>{'criterion': 'entropy', 'max_depth': 10}</td>
-      <td>0.770123</td>
-      <td>0.769726</td>
-      <td>0.874950</td>
-      <td>0.821389</td>
-      <td>0.821667</td>
-      <td>0.855556</td>
-      <td>0.927037</td>
-      <td>0.832870</td>
-      <td>0.872778</td>
-      <td>0.920463</td>
-      <td>0.846656</td>
-      <td>0.051671</td>
-      <td>2</td>
+      <td>0.751478</td>
+      <td>0.759702</td>
+      <td>0.847052</td>
+      <td>0.802870</td>
+      <td>0.841481</td>
+      <td>0.855833</td>
+      <td>0.946759</td>
+      <td>0.811296</td>
+      <td>0.878333</td>
+      <td>0.911389</td>
+      <td>0.840619</td>
+      <td>0.058948</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.188965</td>
-      <td>0.005552</td>
-      <td>0.005690</td>
-      <td>0.000455</td>
+      <td>0.122481</td>
+      <td>0.003860</td>
+      <td>0.004136</td>
+      <td>0.000621</td>
       <td>entropy</td>
       <td>20</td>
       <td>{'criterion': 'entropy', 'max_depth': 20}</td>
-      <td>0.719546</td>
-      <td>0.710678</td>
-      <td>0.785499</td>
+      <td>0.727654</td>
+      <td>0.718741</td>
+      <td>0.801895</td>
+      <td>0.783333</td>
       <td>0.766667</td>
-      <td>0.758333</td>
-      <td>0.816667</td>
-      <td>0.875000</td>
+      <td>0.825000</td>
+      <td>0.900000</td>
       <td>0.800000</td>
-      <td>0.875000</td>
-      <td>0.891667</td>
-      <td>0.799906</td>
-      <td>0.061188</td>
-      <td>12</td>
+      <td>0.858333</td>
+      <td>0.900000</td>
+      <td>0.808162</td>
+      <td>0.060490</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.147215</td>
-      <td>0.029631</td>
-      <td>0.004753</td>
-      <td>0.001043</td>
+      <td>0.122282</td>
+      <td>0.004464</td>
+      <td>0.003855</td>
+      <td>0.000149</td>
       <td>entropy</td>
       <td>30</td>
       <td>{'criterion': 'entropy', 'max_depth': 30}</td>
-      <td>0.711437</td>
-      <td>0.719057</td>
-      <td>0.826804</td>
+      <td>0.744321</td>
+      <td>0.735632</td>
+      <td>0.818695</td>
       <td>0.783333</td>
-      <td>0.750000</td>
+      <td>0.758333</td>
       <td>0.833333</td>
-      <td>0.875000</td>
-      <td>0.783333</td>
-      <td>0.850000</td>
-      <td>0.908333</td>
-      <td>0.804063</td>
-      <td>0.062431</td>
-      <td>10</td>
+      <td>0.891667</td>
+      <td>0.833333</td>
+      <td>0.883333</td>
+      <td>0.900000</td>
+      <td>0.818198</td>
+      <td>0.058193</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.125406</td>
-      <td>0.003998</td>
-      <td>0.003997</td>
-      <td>0.000222</td>
+      <td>0.123012</td>
+      <td>0.004619</td>
+      <td>0.003859</td>
+      <td>0.000239</td>
       <td>entropy</td>
       <td>None</td>
       <td>{'criterion': 'entropy', 'max_depth': None}</td>
       <td>0.735988</td>
-      <td>0.727120</td>
-      <td>0.826849</td>
-      <td>0.783333</td>
-      <td>0.775000</td>
-      <td>0.816667</td>
-      <td>0.875000</td>
-      <td>0.800000</td>
+      <td>0.718832</td>
+      <td>0.810183</td>
+      <td>0.766667</td>
+      <td>0.766667</td>
       <td>0.825000</td>
-      <td>0.891667</td>
-      <td>0.805662</td>
-      <td>0.050639</td>
-      <td>9</td>
+      <td>0.866667</td>
+      <td>0.816667</td>
+      <td>0.850000</td>
+      <td>0.925000</td>
+      <td>0.808167</td>
+      <td>0.059847</td>
+      <td>10</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.106496</td>
-      <td>0.004609</td>
-      <td>0.004060</td>
-      <td>0.000332</td>
+      <td>0.104827</td>
+      <td>0.004128</td>
+      <td>0.003964</td>
+      <td>0.000155</td>
       <td>log_loss</td>
       <td>10</td>
       <td>{'criterion': 'log_loss', 'max_depth': 10}</td>
-      <td>0.745543</td>
-      <td>0.738755</td>
-      <td>0.835090</td>
-      <td>0.801574</td>
-      <td>0.831667</td>
-      <td>0.866389</td>
+      <td>0.781350</td>
+      <td>0.749840</td>
+      <td>0.812990</td>
+      <td>0.802315</td>
+      <td>0.839074</td>
+      <td>0.866481</td>
       <td>0.927593</td>
-      <td>0.843426</td>
-      <td>0.859815</td>
-      <td>0.930278</td>
-      <td>0.838013</td>
-      <td>0.061340</td>
-      <td>3</td>
+      <td>0.833241</td>
+      <td>0.879815</td>
+      <td>0.930185</td>
+      <td>0.842288</td>
+      <td>0.056396</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.123925</td>
-      <td>0.002015</td>
-      <td>0.003872</td>
-      <td>0.000114</td>
+      <td>0.122023</td>
+      <td>0.004266</td>
+      <td>0.003803</td>
+      <td>0.000080</td>
       <td>log_loss</td>
       <td>20</td>
       <td>{'criterion': 'log_loss', 'max_depth': 20}</td>
-      <td>0.711437</td>
-      <td>0.718966</td>
-      <td>0.777256</td>
-      <td>0.783333</td>
-      <td>0.758333</td>
-      <td>0.825000</td>
-      <td>0.883333</td>
-      <td>0.808333</td>
-      <td>0.866667</td>
-      <td>0.891667</td>
-      <td>0.802433</td>
-      <td>0.061129</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.123163</td>
-      <td>0.003642</td>
-      <td>0.003847</td>
-      <td>0.000129</td>
-      <td>log_loss</td>
-      <td>30</td>
-      <td>{'criterion': 'log_loss', 'max_depth': 30}</td>
-      <td>0.744321</td>
+      <td>0.727879</td>
       <td>0.718741</td>
-      <td>0.810183</td>
+      <td>0.835092</td>
+      <td>0.791667</td>
       <td>0.783333</td>
-      <td>0.741667</td>
       <td>0.833333</td>
-      <td>0.883333</td>
-      <td>0.816667</td>
+      <td>0.891667</td>
+      <td>0.800000</td>
       <td>0.858333</td>
       <td>0.883333</td>
-      <td>0.807324</td>
-      <td>0.056242</td>
+      <td>0.812338</td>
+      <td>0.056322</td>
       <td>8</td>
     </tr>
     <tr>
+      <th>10</th>
+      <td>0.122983</td>
+      <td>0.004049</td>
+      <td>0.003796</td>
+      <td>0.000094</td>
+      <td>log_loss</td>
+      <td>30</td>
+      <td>{'criterion': 'log_loss', 'max_depth': 30}</td>
+      <td>0.744546</td>
+      <td>0.710453</td>
+      <td>0.810004</td>
+      <td>0.758333</td>
+      <td>0.750000</td>
+      <td>0.850000</td>
+      <td>0.875000</td>
+      <td>0.833333</td>
+      <td>0.858333</td>
+      <td>0.900000</td>
+      <td>0.809000</td>
+      <td>0.061040</td>
+      <td>9</td>
+    </tr>
+    <tr>
       <th>11</th>
-      <td>0.124234</td>
-      <td>0.004851</td>
-      <td>0.003976</td>
-      <td>0.000239</td>
+      <td>0.184022</td>
+      <td>0.014380</td>
+      <td>0.005878</td>
+      <td>0.001215</td>
       <td>log_loss</td>
       <td>None</td>
       <td>{'criterion': 'log_loss', 'max_depth': None}</td>
-      <td>0.727879</td>
-      <td>0.702165</td>
-      <td>0.826804</td>
+      <td>0.736212</td>
+      <td>0.694327</td>
+      <td>0.801895</td>
       <td>0.775000</td>
-      <td>0.758333</td>
-      <td>0.833333</td>
-      <td>0.883333</td>
+      <td>0.775000</td>
       <td>0.825000</td>
-      <td>0.841667</td>
-      <td>0.916667</td>
-      <td>0.809018</td>
-      <td>0.064084</td>
-      <td>7</td>
+      <td>0.900000</td>
+      <td>0.816667</td>
+      <td>0.850000</td>
+      <td>0.891667</td>
+      <td>0.806577</td>
+      <td>0.061532</td>
+      <td>12</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6e948881-39fc-4cdf-8524-7532ebe31dfa')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1311,12 +1317,12 @@ Name: Kelas, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7 button.colab-df-convert');
+          document.querySelector('#df-6e948881-39fc-4cdf-8524-7532ebe31dfa button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7d8fc2f4-ab60-494a-946d-31ea6e7ee3f7');
+          const element = document.querySelector('#df-6e948881-39fc-4cdf-8524-7532ebe31dfa');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1350,7 +1356,7 @@ Name: Kelas, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ad264f55-2e7c-41c5-8d62-e80836d5649f">
+  <div id="df-4e7ba18a-90b7-431e-81a4-85673119479a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1388,90 +1394,90 @@ Name: Kelas, dtype: int64
       <th>gini_10</th>
       <td>{'criterion': 'gini', 'max_depth': 10}</td>
       <td>1</td>
-      <td>0.848608</td>
-      <td>0.044051</td>
-    </tr>
-    <tr>
-      <th>entropy_10</th>
-      <td>{'criterion': 'entropy', 'max_depth': 10}</td>
-      <td>2</td>
-      <td>0.846656</td>
-      <td>0.051671</td>
+      <td>0.844486</td>
+      <td>0.044561</td>
     </tr>
     <tr>
       <th>log_loss_10</th>
       <td>{'criterion': 'log_loss', 'max_depth': 10}</td>
-      <td>3</td>
-      <td>0.838013</td>
-      <td>0.061340</td>
+      <td>2</td>
+      <td>0.842288</td>
+      <td>0.056396</td>
     </tr>
     <tr>
-      <th>gini_30</th>
-      <td>{'criterion': 'gini', 'max_depth': 30}</td>
-      <td>4</td>
-      <td>0.835636</td>
-      <td>0.048454</td>
+      <th>entropy_10</th>
+      <td>{'criterion': 'entropy', 'max_depth': 10}</td>
+      <td>3</td>
+      <td>0.840619</td>
+      <td>0.058948</td>
     </tr>
     <tr>
       <th>gini_None</th>
       <td>{'criterion': 'gini', 'max_depth': None}</td>
-      <td>5</td>
-      <td>0.830645</td>
-      <td>0.057568</td>
+      <td>4</td>
+      <td>0.827334</td>
+      <td>0.049692</td>
     </tr>
     <tr>
       <th>gini_20</th>
       <td>{'criterion': 'gini', 'max_depth': 20}</td>
+      <td>5</td>
+      <td>0.821787</td>
+      <td>0.061519</td>
+    </tr>
+    <tr>
+      <th>gini_30</th>
+      <td>{'criterion': 'gini', 'max_depth': 30}</td>
       <td>6</td>
-      <td>0.824699</td>
-      <td>0.054635</td>
-    </tr>
-    <tr>
-      <th>log_loss_None</th>
-      <td>{'criterion': 'log_loss', 'max_depth': None}</td>
-      <td>7</td>
-      <td>0.809018</td>
-      <td>0.064084</td>
-    </tr>
-    <tr>
-      <th>log_loss_30</th>
-      <td>{'criterion': 'log_loss', 'max_depth': 30}</td>
-      <td>8</td>
-      <td>0.807324</td>
-      <td>0.056242</td>
-    </tr>
-    <tr>
-      <th>entropy_None</th>
-      <td>{'criterion': 'entropy', 'max_depth': None}</td>
-      <td>9</td>
-      <td>0.805662</td>
-      <td>0.050639</td>
+      <td>0.819001</td>
+      <td>0.052831</td>
     </tr>
     <tr>
       <th>entropy_30</th>
       <td>{'criterion': 'entropy', 'max_depth': 30}</td>
-      <td>10</td>
-      <td>0.804063</td>
-      <td>0.062431</td>
+      <td>7</td>
+      <td>0.818198</td>
+      <td>0.058193</td>
     </tr>
     <tr>
       <th>log_loss_20</th>
       <td>{'criterion': 'log_loss', 'max_depth': 20}</td>
-      <td>11</td>
-      <td>0.802433</td>
-      <td>0.061129</td>
+      <td>8</td>
+      <td>0.812338</td>
+      <td>0.056322</td>
+    </tr>
+    <tr>
+      <th>log_loss_30</th>
+      <td>{'criterion': 'log_loss', 'max_depth': 30}</td>
+      <td>9</td>
+      <td>0.809000</td>
+      <td>0.061040</td>
+    </tr>
+    <tr>
+      <th>entropy_None</th>
+      <td>{'criterion': 'entropy', 'max_depth': None}</td>
+      <td>10</td>
+      <td>0.808167</td>
+      <td>0.059847</td>
     </tr>
     <tr>
       <th>entropy_20</th>
       <td>{'criterion': 'entropy', 'max_depth': 20}</td>
+      <td>11</td>
+      <td>0.808162</td>
+      <td>0.060490</td>
+    </tr>
+    <tr>
+      <th>log_loss_None</th>
+      <td>{'criterion': 'log_loss', 'max_depth': None}</td>
       <td>12</td>
-      <td>0.799906</td>
-      <td>0.061188</td>
+      <td>0.806577</td>
+      <td>0.061532</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ad264f55-2e7c-41c5-8d62-e80836d5649f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4e7ba18a-90b7-431e-81a4-85673119479a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1522,12 +1528,12 @@ Name: Kelas, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ad264f55-2e7c-41c5-8d62-e80836d5649f button.colab-df-convert');
+          document.querySelector('#df-4e7ba18a-90b7-431e-81a4-85673119479a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ad264f55-2e7c-41c5-8d62-e80836d5649f');
+          const element = document.querySelector('#df-4e7ba18a-90b7-431e-81a4-85673119479a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1577,52 +1583,52 @@ Name: Kelas, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/140115cd8b6382f522d6805b00672a532f5c42a61736e3220cd8f32d70510b01.png" src="_images/140115cd8b6382f522d6805b00672a532f5c42a61736e3220cd8f32d70510b01.png" />
+<img alt="_images/4eef18e949132ae1d61a67b9c314b048f57e95431dda5e8f054930538addd8b2.png" src="_images/4eef18e949132ae1d61a67b9c314b048f57e95431dda5e8f054930538addd8b2.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlation of models:
- criterion       gini_10  entropy_10  log_loss_10   gini_30  gini_None  \
+ criterion       gini_10  log_loss_10  entropy_10  gini_None   gini_20  \
 criterion                                                               
-gini_10        1.000000    0.765246     0.848716  0.847466   0.849752   
-entropy_10     0.765246    1.000000     0.961251  0.653763   0.757846   
-log_loss_10    0.848716    0.961251     1.000000  0.786849   0.874949   
-gini_30        0.847466    0.653763     0.786849  1.000000   0.954761   
-gini_None      0.849752    0.757846     0.874949  0.954761   1.000000   
-gini_20        0.848957    0.742755     0.880020  0.904031   0.965801   
-log_loss_None  0.720946    0.961169     0.958955  0.735748   0.822184   
-log_loss_30    0.676684    0.933184     0.916650  0.747027   0.831968   
-entropy_None   0.759912    0.990111     0.966929  0.691302   0.780691   
-entropy_30     0.721180    0.969990     0.932995  0.687058   0.748478   
-log_loss_20    0.795063    0.922675     0.941446  0.847957   0.897416   
-entropy_20     0.756160    0.930016     0.935478  0.791953   0.870104   
+gini_10        1.000000     0.797106    0.798518   0.906857  0.827676   
+log_loss_10    0.797106     1.000000    0.949152   0.817301  0.825723   
+entropy_10     0.798518     0.949152    1.000000   0.710187  0.709355   
+gini_None      0.906857     0.817301    0.710187   1.000000  0.963536   
+gini_20        0.827676     0.825723    0.709355   0.963536  1.000000   
+gini_30        0.916808     0.903989    0.840833   0.943460  0.923956   
+entropy_30     0.705802     0.909163    0.885159   0.753571  0.743752   
+log_loss_20    0.697793     0.925767    0.959742   0.673783  0.672628   
+log_loss_30    0.674674     0.914349    0.856097   0.755801  0.775382   
+entropy_None   0.699114     0.934787    0.886330   0.750467  0.747880   
+entropy_20     0.755876     0.960094    0.950930   0.755102  0.733399   
+log_loss_None  0.770192     0.968213    0.938734   0.788805  0.776186   
 
-criterion       gini_20  log_loss_None  log_loss_30  entropy_None  entropy_30  \
-criterion                                                                       
-gini_10        0.848957       0.720946     0.676684      0.759912    0.721180   
-entropy_10     0.742755       0.961169     0.933184      0.990111    0.969990   
-log_loss_10    0.880020       0.958955     0.916650      0.966929    0.932995   
-gini_30        0.904031       0.735748     0.747027      0.691302    0.687058   
-gini_None      0.965801       0.822184     0.831968      0.780691    0.748478   
-gini_20        1.000000       0.787353     0.771611      0.749932    0.711920   
-log_loss_None  0.787353       1.000000     0.972486      0.984740    0.970429   
-log_loss_30    0.771611       0.972486     1.000000      0.947463    0.959947   
-entropy_None   0.749932       0.984740     0.947463      1.000000    0.978888   
-entropy_30     0.711920       0.970429     0.959947      0.978888    1.000000   
-log_loss_20    0.850688       0.946990     0.967381      0.933031    0.950210   
-entropy_20     0.829284       0.952672     0.970638      0.937680    0.954721   
+criterion       gini_30  entropy_30  log_loss_20  log_loss_30  entropy_None  \
+criterion                                                                     
+gini_10        0.916808    0.705802     0.697793     0.674674      0.699114   
+log_loss_10    0.903989    0.909163     0.925767     0.914349      0.934787   
+entropy_10     0.840833    0.885159     0.959742     0.856097      0.886330   
+gini_None      0.943460    0.753571     0.673783     0.755801      0.750467   
+gini_20        0.923956    0.743752     0.672628     0.775382      0.747880   
+gini_30        1.000000    0.818478     0.772267     0.806440      0.807969   
+entropy_30     0.818478    1.000000     0.951879     0.976669      0.964882   
+log_loss_20    0.772267    0.951879     1.000000     0.930065      0.939649   
+log_loss_30    0.806440    0.976669     0.930065     1.000000      0.970762   
+entropy_None   0.807969    0.964882     0.939649     0.970762      1.000000   
+entropy_20     0.852634    0.975429     0.977724     0.950254      0.965539   
+log_loss_None  0.847417    0.964582     0.970180     0.961347      0.959584   
 
-criterion      log_loss_20  entropy_20  
-criterion                               
-gini_10           0.795063    0.756160  
-entropy_10        0.922675    0.930016  
-log_loss_10       0.941446    0.935478  
-gini_30           0.847957    0.791953  
-gini_None         0.897416    0.870104  
-gini_20           0.850688    0.829284  
-log_loss_None     0.946990    0.952672  
-log_loss_30       0.967381    0.970638  
-entropy_None      0.933031    0.937680  
-entropy_30        0.950210    0.954721  
-log_loss_20       1.000000    0.990722  
-entropy_20        0.990722    1.000000  
+criterion      entropy_20  log_loss_None  
+criterion                                 
+gini_10          0.755876       0.770192  
+log_loss_10      0.960094       0.968213  
+entropy_10       0.950930       0.938734  
+gini_None        0.755102       0.788805  
+gini_20          0.733399       0.776186  
+gini_30          0.852634       0.847417  
+entropy_30       0.975429       0.964582  
+log_loss_20      0.977724       0.970180  
+log_loss_30      0.950254       0.961347  
+entropy_None     0.965539       0.959584  
+entropy_20       1.000000       0.984030  
+log_loss_None    0.984030       1.000000  
 </pre></div>
 </div>
 </div>
@@ -1653,14 +1659,14 @@ entropy_20        0.990722    1.000000
  Text(0.11258278145695365, 0.4090909090909091, &#39;x[1882] &lt;= 0.025\ngini = 0.389\nsamples = 96\nvalue = [16, 7, 73]&#39;),
  Text(0.09933774834437085, 0.3181818181818182, &#39;x[2827] &lt;= 0.0\ngini = 0.348\nsamples = 92\nvalue = [12, 7, 73]&#39;),
  Text(0.052980132450331126, 0.22727272727272727, &#39;x[3874] &lt;= 0.029\ngini = 0.267\nsamples = 85\nvalue = [10, 3, 72]&#39;),
- Text(0.026490066225165563, 0.13636363636363635, &#39;x[2300] &lt;= 0.045\ngini = 0.205\nsamples = 80\nvalue = [6, 3, 71]&#39;),
+ Text(0.026490066225165563, 0.13636363636363635, &#39;x[3443] &lt;= 0.017\ngini = 0.205\nsamples = 80\nvalue = [6, 3, 71]&#39;),
  Text(0.013245033112582781, 0.045454545454545456, &#39;gini = 0.167\nsamples = 78\nvalue = [4, 3, 71]&#39;),
  Text(0.039735099337748346, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
- Text(0.07947019867549669, 0.13636363636363635, &#39;x[3575] &lt;= 0.026\ngini = 0.32\nsamples = 5\nvalue = [4, 0, 1]&#39;),
+ Text(0.07947019867549669, 0.13636363636363635, &#39;x[4694] &lt;= 0.052\ngini = 0.32\nsamples = 5\nvalue = [4, 0, 1]&#39;),
  Text(0.06622516556291391, 0.045454545454545456, &#39;gini = 0.0\nsamples = 4\nvalue = [4, 0, 0]&#39;),
  Text(0.09271523178807947, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
- Text(0.1456953642384106, 0.22727272727272727, &#39;x[352] &lt;= 0.019\ngini = 0.571\nsamples = 7\nvalue = [2, 4, 1]&#39;),
- Text(0.13245033112582782, 0.13636363636363635, &#39;x[1698] &lt;= 0.001\ngini = 0.444\nsamples = 3\nvalue = [2, 0, 1]&#39;),
+ Text(0.1456953642384106, 0.22727272727272727, &#39;x[166] &lt;= 0.022\ngini = 0.571\nsamples = 7\nvalue = [2, 4, 1]&#39;),
+ Text(0.13245033112582782, 0.13636363636363635, &#39;x[4694] &lt;= 0.026\ngini = 0.444\nsamples = 3\nvalue = [2, 0, 1]&#39;),
  Text(0.11920529801324503, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
  Text(0.1456953642384106, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
  Text(0.15894039735099338, 0.13636363636363635, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
@@ -1669,7 +1675,7 @@ entropy_20        0.990722    1.000000
  Text(0.18543046357615894, 0.5, &#39;x[3807] &lt;= 0.006\ngini = 0.554\nsamples = 17\nvalue = [8, 8, 1]&#39;),
  Text(0.17218543046357615, 0.4090909090909091, &#39;x[452] &lt;= 0.033\ngini = 0.34\nsamples = 10\nvalue = [8, 1, 1]&#39;),
  Text(0.15894039735099338, 0.3181818181818182, &#39;gini = 0.0\nsamples = 8\nvalue = [8, 0, 0]&#39;),
- Text(0.18543046357615894, 0.3181818181818182, &#39;x[844] &lt;= 0.06\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 1]&#39;),
+ Text(0.18543046357615894, 0.3181818181818182, &#39;x[3767] &lt;= 0.036\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 1]&#39;),
  Text(0.17218543046357615, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
  Text(0.1986754966887417, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
  Text(0.1986754966887417, 0.4090909090909091, &#39;gini = 0.0\nsamples = 7\nvalue = [0, 7, 0]&#39;),
@@ -1684,36 +1690,36 @@ entropy_20        0.990722    1.000000
  Text(0.25165562913907286, 0.13636363636363635, &#39;x[1508] &lt;= 0.004\ngini = 0.579\nsamples = 39\nvalue = [15, 4, 20]&#39;),
  Text(0.23841059602649006, 0.045454545454545456, &#39;gini = 0.509\nsamples = 25\nvalue = [15, 1, 9]&#39;),
  Text(0.26490066225165565, 0.045454545454545456, &#39;gini = 0.337\nsamples = 14\nvalue = [0, 3, 11]&#39;),
- Text(0.2913907284768212, 0.22727272727272727, &#39;x[1294] &lt;= 0.086\ngini = 0.245\nsamples = 7\nvalue = [0, 6, 1]&#39;),
+ Text(0.2913907284768212, 0.22727272727272727, &#39;x[3025] &lt;= 0.036\ngini = 0.245\nsamples = 7\nvalue = [0, 6, 1]&#39;),
  Text(0.2781456953642384, 0.13636363636363635, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
  Text(0.304635761589404, 0.13636363636363635, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
  Text(0.2847682119205298, 0.3181818181818182, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
- Text(0.32450331125827814, 0.4090909090909091, &#39;x[562] &lt;= 0.058\ngini = 0.053\nsamples = 37\nvalue = [36, 0, 1]&#39;),
+ Text(0.32450331125827814, 0.4090909090909091, &#39;x[749] &lt;= 0.109\ngini = 0.053\nsamples = 37\nvalue = [36, 0, 1]&#39;),
  Text(0.31125827814569534, 0.3181818181818182, &#39;gini = 0.0\nsamples = 36\nvalue = [36, 0, 0]&#39;),
  Text(0.33774834437086093, 0.3181818181818182, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
- Text(0.36423841059602646, 0.5, &#39;x[1236] &lt;= 0.031\ngini = 0.124\nsamples = 15\nvalue = [1, 0, 14]&#39;),
+ Text(0.36423841059602646, 0.5, &#39;x[3345] &lt;= 0.237\ngini = 0.124\nsamples = 15\nvalue = [1, 0, 14]&#39;),
  Text(0.3509933774834437, 0.4090909090909091, &#39;gini = 0.0\nsamples = 14\nvalue = [0, 0, 14]&#39;),
  Text(0.37748344370860926, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
- Text(0.4867549668874172, 0.6818181818181818, &#39;x[4270] &lt;= 0.048\ngini = 0.279\nsamples = 164\nvalue = [10, 16, 138]&#39;),
- Text(0.4735099337748344, 0.5909090909090909, &#39;x[1383] &lt;= 0.139\ngini = 0.211\nsamples = 156\nvalue = [10, 8, 138]&#39;),
- Text(0.4370860927152318, 0.5, &#39;x[2220] &lt;= 0.039\ngini = 0.138\nsamples = 149\nvalue = [9, 2, 138]&#39;),
- Text(0.40397350993377484, 0.4090909090909091, &#39;x[3627] &lt;= 0.122\ngini = 0.094\nsamples = 143\nvalue = [5, 2, 136]&#39;),
- Text(0.37748344370860926, 0.3181818181818182, &#39;x[1287] &lt;= 0.115\ngini = 0.056\nsamples = 140\nvalue = [3, 1, 136]&#39;),
- Text(0.36423841059602646, 0.22727272727272727, &#39;x[1771] &lt;= 0.085\ngini = 0.042\nsamples = 139\nvalue = [3, 0, 136]&#39;),
- Text(0.3509933774834437, 0.13636363636363635, &#39;x[17] &lt;= 0.05\ngini = 0.029\nsamples = 138\nvalue = [2, 0, 136]&#39;),
- Text(0.33774834437086093, 0.045454545454545456, &#39;gini = 0.014\nsamples = 137\nvalue = [1, 0, 136]&#39;),
- Text(0.36423841059602646, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
- Text(0.37748344370860926, 0.13636363636363635, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
- Text(0.39072847682119205, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
- Text(0.4304635761589404, 0.3181818181818182, &#39;x[4088] &lt;= 0.113\ngini = 0.444\nsamples = 3\nvalue = [2, 1, 0]&#39;),
- Text(0.41721854304635764, 0.22727272727272727, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
- Text(0.44370860927152317, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
- Text(0.47019867549668876, 0.4090909090909091, &#39;x[2910] &lt;= 0.038\ngini = 0.444\nsamples = 6\nvalue = [4, 0, 2]&#39;),
- Text(0.45695364238410596, 0.3181818181818182, &#39;gini = 0.0\nsamples = 4\nvalue = [4, 0, 0]&#39;),
- Text(0.48344370860927155, 0.3181818181818182, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 0, 2]&#39;),
- Text(0.5099337748344371, 0.5, &#39;x[2594] &lt;= 0.083\ngini = 0.245\nsamples = 7\nvalue = [1, 6, 0]&#39;),
- Text(0.4966887417218543, 0.4090909090909091, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
- Text(0.5231788079470199, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
+ Text(0.4867549668874172, 0.6818181818181818, &#39;x[318] &lt;= 0.012\ngini = 0.279\nsamples = 164\nvalue = [10, 16, 138]&#39;),
+ Text(0.4735099337748344, 0.5909090909090909, &#39;x[774] &lt;= 0.042\ngini = 0.211\nsamples = 156\nvalue = [10, 8, 138]&#39;),
+ Text(0.4370860927152318, 0.5, &#39;x[3627] &lt;= 0.122\ngini = 0.138\nsamples = 149\nvalue = [9, 2, 138]&#39;),
+ Text(0.40397350993377484, 0.4090909090909091, &#39;x[108] &lt;= 0.047\ngini = 0.092\nsamples = 145\nvalue = [6, 1, 138]&#39;),
+ Text(0.37748344370860926, 0.3181818181818182, &#39;x[1550] &lt;= 0.052\ngini = 0.055\nsamples = 141\nvalue = [3, 1, 137]&#39;),
+ Text(0.36423841059602646, 0.22727272727272727, &#39;gini = 0.0\nsamples = 131\nvalue = [0, 0, 131]&#39;),
+ Text(0.39072847682119205, 0.22727272727272727, &#39;x[1844] &lt;= 0.029\ngini = 0.54\nsamples = 10\nvalue = [3, 1, 6]&#39;),
+ Text(0.37748344370860926, 0.13636363636363635, &#39;x[2450] &lt;= 0.107\ngini = 0.245\nsamples = 7\nvalue = [0, 1, 6]&#39;),
+ Text(0.36423841059602646, 0.045454545454545456, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 0, 6]&#39;),
+ Text(0.39072847682119205, 0.045454545454545456, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.40397350993377484, 0.13636363636363635, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
+ Text(0.4304635761589404, 0.3181818181818182, &#39;x[2250] &lt;= 0.034\ngini = 0.375\nsamples = 4\nvalue = [3, 0, 1]&#39;),
+ Text(0.41721854304635764, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
+ Text(0.44370860927152317, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
+ Text(0.47019867549668876, 0.4090909090909091, &#39;x[1233] &lt;= 0.028\ngini = 0.375\nsamples = 4\nvalue = [3, 1, 0]&#39;),
+ Text(0.45695364238410596, 0.3181818181818182, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
+ Text(0.48344370860927155, 0.3181818181818182, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
+ Text(0.5099337748344371, 0.5, &#39;x[1864] &lt;= 0.005\ngini = 0.245\nsamples = 7\nvalue = [1, 6, 0]&#39;),
+ Text(0.4966887417218543, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;),
+ Text(0.5231788079470199, 0.4090909090909091, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
  Text(0.5, 0.5909090909090909, &#39;gini = 0.0\nsamples = 8\nvalue = [0, 8, 0]&#39;),
  Text(0.5264900662251656, 0.7727272727272727, &#39;x[3549] &lt;= 0.083\ngini = 0.105\nsamples = 36\nvalue = [2, 34, 0]&#39;),
  Text(0.5132450331125827, 0.6818181818181818, &#39;gini = 0.0\nsamples = 34\nvalue = [0, 34, 0]&#39;),
@@ -1724,68 +1730,68 @@ entropy_20        0.990722    1.000000
  Text(0.5761589403973509, 0.5909090909090909, &#39;x[1709] &lt;= 0.133\ngini = 0.41\nsamples = 130\nvalue = [97, 13, 20]&#39;),
  Text(0.5629139072847682, 0.5, &#39;x[4829] &lt;= 0.015\ngini = 0.373\nsamples = 125\nvalue = [97, 13, 15]&#39;),
  Text(0.5496688741721855, 0.4090909090909091, &#39;x[3629] &lt;= 0.071\ngini = 0.336\nsamples = 121\nvalue = [97, 9, 15]&#39;),
- Text(0.5231788079470199, 0.3181818181818182, &#39;x[2861] &lt;= 0.02\ngini = 0.296\nsamples = 117\nvalue = [97, 6, 14]&#39;),
+ Text(0.5231788079470199, 0.3181818181818182, &#39;x[344] &lt;= 0.111\ngini = 0.296\nsamples = 117\nvalue = [97, 6, 14]&#39;),
  Text(0.5099337748344371, 0.22727272727272727, &#39;x[2778] &lt;= 0.018\ngini = 0.264\nsamples = 114\nvalue = [97, 6, 11]&#39;),
- Text(0.4966887417218543, 0.13636363636363635, &#39;x[4719] &lt;= 0.045\ngini = 0.228\nsamples = 111\nvalue = [97, 6, 8]&#39;),
+ Text(0.4966887417218543, 0.13636363636363635, &#39;x[1071] &lt;= 0.075\ngini = 0.228\nsamples = 111\nvalue = [97, 6, 8]&#39;),
  Text(0.48344370860927155, 0.045454545454545456, &#39;gini = 0.202\nsamples = 109\nvalue = [97, 6, 6]&#39;),
  Text(0.5099337748344371, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 0, 2]&#39;),
  Text(0.5231788079470199, 0.13636363636363635, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]&#39;),
  Text(0.5364238410596026, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]&#39;),
- Text(0.5761589403973509, 0.3181818181818182, &#39;x[4725] &lt;= 0.048\ngini = 0.375\nsamples = 4\nvalue = [0, 3, 1]&#39;),
+ Text(0.5761589403973509, 0.3181818181818182, &#39;x[1304] &lt;= 0.044\ngini = 0.375\nsamples = 4\nvalue = [0, 3, 1]&#39;),
  Text(0.5629139072847682, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 3, 0]&#39;),
  Text(0.5894039735099338, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
  Text(0.5761589403973509, 0.4090909090909091, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
  Text(0.5894039735099338, 0.5, &#39;gini = 0.0\nsamples = 5\nvalue = [0, 0, 5]&#39;),
- Text(0.6291390728476821, 0.5909090909090909, &#39;x[2018] &lt;= 0.087\ngini = 0.18\nsamples = 20\nvalue = [2, 18, 0]&#39;),
+ Text(0.6291390728476821, 0.5909090909090909, &#39;x[4672] &lt;= 0.041\ngini = 0.18\nsamples = 20\nvalue = [2, 18, 0]&#39;),
  Text(0.6158940397350994, 0.5, &#39;gini = 0.0\nsamples = 18\nvalue = [0, 18, 0]&#39;),
  Text(0.6423841059602649, 0.5, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
  Text(0.6291390728476821, 0.6818181818181818, &#39;gini = 0.0\nsamples = 18\nvalue = [0, 18, 0]&#39;),
  Text(0.8451986754966887, 0.7727272727272727, &#39;x[606] &lt;= 0.025\ngini = 0.479\nsamples = 236\nvalue = [58, 159, 19]&#39;),
  Text(0.7764900662251656, 0.6818181818181818, &#39;x[2520] &lt;= 0.026\ngini = 0.372\nsamples = 194\nvalue = [37, 149, 8]&#39;),
  Text(0.7251655629139073, 0.5909090909090909, &#39;x[2542] &lt;= 0.037\ngini = 0.292\nsamples = 180\nvalue = [32, 148, 0]&#39;),
- Text(0.6887417218543046, 0.5, &#39;x[4440] &lt;= 0.07\ngini = 0.23\nsamples = 166\nvalue = [22, 144, 0]&#39;),
- Text(0.6556291390728477, 0.4090909090909091, &#39;x[1592] &lt;= 0.041\ngini = 0.182\nsamples = 158\nvalue = [16, 142, 0]&#39;),
- Text(0.6291390728476821, 0.3181818181818182, &#39;x[3370] &lt;= 0.039\ngini = 0.134\nsamples = 152\nvalue = [11, 141, 0]&#39;),
- Text(0.6158940397350994, 0.22727272727272727, &#39;x[61] &lt;= 0.056\ngini = 0.102\nsamples = 149\nvalue = [8, 141, 0]&#39;),
- Text(0.6026490066225165, 0.13636363636363635, &#39;x[4340] &lt;= 0.165\ngini = 0.066\nsamples = 146\nvalue = [5, 141, 0]&#39;),
+ Text(0.6887417218543046, 0.5, &#39;x[1592] &lt;= 0.041\ngini = 0.23\nsamples = 166\nvalue = [22, 144, 0]&#39;),
+ Text(0.6556291390728477, 0.4090909090909091, &#39;x[4440] &lt;= 0.07\ngini = 0.182\nsamples = 158\nvalue = [16, 142, 0]&#39;),
+ Text(0.6291390728476821, 0.3181818181818182, &#39;x[61] &lt;= 0.056\ngini = 0.134\nsamples = 152\nvalue = [11, 141, 0]&#39;),
+ Text(0.6158940397350994, 0.22727272727272727, &#39;x[3370] &lt;= 0.039\ngini = 0.102\nsamples = 149\nvalue = [8, 141, 0]&#39;),
+ Text(0.6026490066225165, 0.13636363636363635, &#39;x[4474] &lt;= 0.063\ngini = 0.066\nsamples = 146\nvalue = [5, 141, 0]&#39;),
  Text(0.5894039735099338, 0.045454545454545456, &#39;gini = 0.041\nsamples = 144\nvalue = [3, 141, 0]&#39;),
  Text(0.6158940397350994, 0.045454545454545456, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]&#39;),
  Text(0.6291390728476821, 0.13636363636363635, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
  Text(0.6423841059602649, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
- Text(0.6821192052980133, 0.3181818181818182, &#39;x[2952] &lt;= 0.019\ngini = 0.278\nsamples = 6\nvalue = [5, 1, 0]&#39;),
+ Text(0.6821192052980133, 0.3181818181818182, &#39;x[1165] &lt;= 0.062\ngini = 0.278\nsamples = 6\nvalue = [5, 1, 0]&#39;),
  Text(0.6688741721854304, 0.22727272727272727, &#39;gini = 0.0\nsamples = 5\nvalue = [5, 0, 0]&#39;),
  Text(0.695364238410596, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
- Text(0.7218543046357616, 0.4090909090909091, &#39;x[2991] &lt;= 0.03\ngini = 0.375\nsamples = 8\nvalue = [6, 2, 0]&#39;),
+ Text(0.7218543046357616, 0.4090909090909091, &#39;x[3998] &lt;= 0.014\ngini = 0.375\nsamples = 8\nvalue = [6, 2, 0]&#39;),
  Text(0.7086092715231788, 0.3181818181818182, &#39;gini = 0.0\nsamples = 6\nvalue = [6, 0, 0]&#39;),
  Text(0.7350993377483444, 0.3181818181818182, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 2, 0]&#39;),
- Text(0.7615894039735099, 0.5, &#39;x[785] &lt;= 0.028\ngini = 0.408\nsamples = 14\nvalue = [10, 4, 0]&#39;),
+ Text(0.7615894039735099, 0.5, &#39;x[3763] &lt;= 0.089\ngini = 0.408\nsamples = 14\nvalue = [10, 4, 0]&#39;),
  Text(0.7483443708609272, 0.4090909090909091, &#39;gini = 0.0\nsamples = 10\nvalue = [10, 0, 0]&#39;),
  Text(0.7748344370860927, 0.4090909090909091, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
  Text(0.8278145695364238, 0.5909090909090909, &#39;x[225] &lt;= 0.008\ngini = 0.541\nsamples = 14\nvalue = [5, 1, 8]&#39;),
- Text(0.8145695364238411, 0.5, &#39;x[2557] &lt;= 0.028\ngini = 0.278\nsamples = 6\nvalue = [5, 1, 0]&#39;),
+ Text(0.8145695364238411, 0.5, &#39;x[4324] &lt;= 0.002\ngini = 0.278\nsamples = 6\nvalue = [5, 1, 0]&#39;),
  Text(0.8013245033112583, 0.4090909090909091, &#39;gini = 0.0\nsamples = 5\nvalue = [5, 0, 0]&#39;),
  Text(0.8278145695364238, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]&#39;),
  Text(0.8410596026490066, 0.5, &#39;gini = 0.0\nsamples = 8\nvalue = [0, 0, 8]&#39;),
  Text(0.9139072847682119, 0.6818181818181818, &#39;x[2731] &lt;= 0.028\ngini = 0.625\nsamples = 42\nvalue = [21, 10, 11]&#39;),
  Text(0.8807947019867549, 0.5909090909090909, &#39;x[2009] &lt;= 0.027\ngini = 0.598\nsamples = 19\nvalue = [3, 6, 10]&#39;),
- Text(0.8675496688741722, 0.5, &#39;x[349] &lt;= 0.042\ngini = 0.639\nsamples = 13\nvalue = [3, 6, 4]&#39;),
+ Text(0.8675496688741722, 0.5, &#39;x[4442] &lt;= 0.005\ngini = 0.639\nsamples = 13\nvalue = [3, 6, 4]&#39;),
  Text(0.8543046357615894, 0.4090909090909091, &#39;x[3998] &lt;= 0.02\ngini = 0.54\nsamples = 10\nvalue = [3, 6, 1]&#39;),
  Text(0.8410596026490066, 0.3181818181818182, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 6, 0]&#39;),
- Text(0.8675496688741722, 0.3181818181818182, &#39;x[1709] &lt;= 0.074\ngini = 0.375\nsamples = 4\nvalue = [3, 0, 1]&#39;),
+ Text(0.8675496688741722, 0.3181818181818182, &#39;x[2018] &lt;= 0.003\ngini = 0.375\nsamples = 4\nvalue = [3, 0, 1]&#39;),
  Text(0.8543046357615894, 0.22727272727272727, &#39;gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]&#39;),
  Text(0.8807947019867549, 0.22727272727272727, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
  Text(0.8807947019867549, 0.4090909090909091, &#39;gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]&#39;),
  Text(0.8940397350993378, 0.5, &#39;gini = 0.0\nsamples = 6\nvalue = [0, 0, 6]&#39;),
  Text(0.9470198675496688, 0.5909090909090909, &#39;x[3876] &lt;= 0.027\ngini = 0.355\nsamples = 23\nvalue = [18, 4, 1]&#39;),
- Text(0.9205298013245033, 0.5, &#39;x[2709] &lt;= 0.146\ngini = 0.105\nsamples = 18\nvalue = [17, 0, 1]&#39;),
+ Text(0.9205298013245033, 0.5, &#39;x[1774] &lt;= 0.054\ngini = 0.105\nsamples = 18\nvalue = [17, 0, 1]&#39;),
  Text(0.9072847682119205, 0.4090909090909091, &#39;gini = 0.0\nsamples = 17\nvalue = [17, 0, 0]&#39;),
  Text(0.9337748344370861, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]&#39;),
- Text(0.9735099337748344, 0.5, &#39;x[2898] &lt;= 0.103\ngini = 0.32\nsamples = 5\nvalue = [1, 4, 0]&#39;),
+ Text(0.9735099337748344, 0.5, &#39;x[2979] &lt;= 0.028\ngini = 0.32\nsamples = 5\nvalue = [1, 4, 0]&#39;),
  Text(0.9602649006622517, 0.4090909090909091, &#39;gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]&#39;),
  Text(0.9867549668874173, 0.4090909090909091, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]&#39;)]
 </pre></div>
 </div>
-<img alt="_images/759d842d0f60fb8ed40ba13707430a881c7d5def80d762a7ed7bdb048cf09a45.png" src="_images/759d842d0f60fb8ed40ba13707430a881c7d5def80d762a7ed7bdb048cf09a45.png" />
+<img alt="_images/111db9c91306ddc96e0df912a0976eaa4afb09db4e9d189948242f68e3776eaf.png" src="_images/111db9c91306ddc96e0df912a0976eaa4afb09db4e9d189948242f68e3776eaf.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1822,9 +1828,9 @@ Decision Tree n leaves :  70
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[79 10 24]
- [21 17 11]
- [19  6 51]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[78 11 24]
+ [22 17 10]
+ [19  5 52]]
 </pre></div>
 </div>
 </div>
@@ -1846,7 +1852,7 @@ Decision Tree n leaves :  70
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test_tfidf</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="ne">ImportError</span>: cannot import name &#39;plot_confusion_matrix&#39; from &#39;sklearn.metrics&#39; (/usr/local/lib/python3.9/dist-packages/sklearn/metrics/__init__.py)
+<span class="ne">ImportError</span>: cannot import name &#39;plot_confusion_matrix&#39; from &#39;sklearn.metrics&#39; (/usr/local/lib/python3.10/dist-packages/sklearn/metrics/__init__.py)
 
 <span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NOTE</span>: If your import is failing due to a missing package, you can
